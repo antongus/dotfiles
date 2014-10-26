@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Openbox 3">
+<!--  <item label="Run program">
+    <action name="Execute"><execute>gmrun</execute></action>
+  </item>
+  <separator />  -->
+  <item label="Terminal emulator">
+    <action name="Execute"><execute>x-terminal-emulator</execute></action>
+  </item>
+  <item label="Midnight Commander" icon="/usr/share/icons/hicolor/64x64/apps/MidnightCommander.png">
+    <action name="Execute"><execute>x-terminal-emulator -e mc</execute></action>
+  </item>
+  <item label="Firefox web browser" icon="/usr/share/icons/nuoveXT2/24x24/apps/firefox.png">
+    <action name="Execute"><execute>x-www-browser</execute></action>
+  </item>
+  <item label="Thunderbird mail" icon="/usr/share/pixmaps/thunderbird.png">
+    <action name="Execute"><execute>run-thunderbird</execute></action>
+  </item>
+  <item label="Eclipse" icon="/usr/share/icons/hicolor/22x22/apps/eclipse.png">
+    <action name="Execute"><execute>/opt/eclipse/eclipse</execute></action>
+  </item>
+  <item label="Pidgin" icon="/usr/share/icons/hicolor/24x24/apps/pidgin.png">
+    <action name="Execute"><execute>run-pidgin</execute></action>
+  </item>
+  <item label="DeadBeef" icon="/opt/deadbeef-0.6.1/deadbeef.png">
+    <action name="Execute"><execute>/opt/deadbeef-0.6.1/deadbeef</execute></action>
+  </item>
+  <item label="Qt Creator" icon="/usr/share/icons/Mint-X/apps/24/qtcreator.png">
+    <action name="Execute"><execute>/opt/Qt/Tools/QtCreator/bin/qtcreator</execute></action>
+  </item>
+  <item label="KiCAD" icon="/home/anton/.icons/kicad.png">
+      <action name="Execute"><execute>kicad</execute></action>
+  </item>
+  <!-- This requires the presence of the 'menu' package to work -->
+  <menu id="/Debian" />
+  <menu id="misc-menu" label="Misc">
+    <item label="Keepass" icon="/usr/share/icons/hicolor/24x24/apps/keepassx.png">
+      <action name="Execute"><execute>keepassx</execute></action>
+    </item>
+    <item label="Disk utility">
+      <action name="Execute"><execute>palimpsest</execute></action>
+    </item>
+  </menu>
+  <menu id="terminals-menu" label="Terminals" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+    <item label="com1-115200" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+      <action name="Execute"><execute>/usr/bin/putty -load com1-115200</execute></action>
+    </item>
+    <item label="/dev/ttyUSB0" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+      <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB0</execute></action>
+    </item>
+    <item label="/dev/ttyUSB0-38400" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+      <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB0-38400</execute></action>
+    </item>
+    <item label="/dev/ttyUSB1" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+      <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB1</execute></action>
+    </item>
+    <item label="/dev/ttyUSB1-38400" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+      <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB1-38400</execute></action>
+    </item>
+    <item label="/dev/ttyUSB2" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+      <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB2</execute></action>
+    </item>
+    <item label="com1-38400" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+      <action name="Execute"><execute>/usr/bin/putty -load com1-38400</execute></action>
+    </item>
+  </menu>
+  <menu id="sch-menu" label="PCB">
+    <item label="Schematic" icon="/home/anton/.icons/sch.png">
+      <action name="Execute"><execute>~/Misc/P-CAD\ 2001/Sch.exe</execute></action>
+    </item>
+    <item label="PCB" icon="/home/anton/.icons/pcb.png">
+      <action name="Execute"><execute>~/Misc/P-CAD\ 2001/Pcb.exe</execute></action>
+    </item>
+  </menu>
+  <menu id="openbox-menu" label="Openbox">
+    <item label="rc.xml">
+      <action name="Execute"><execute>x-terminal-emulator -e mcedit ~/.config/openbox/rc.xml</execute></action>
+    </item>
+    <item label="menu.xml">
+      <action name="Execute"><execute>x-terminal-emulator -e mcedit ~/.config/openbox/menu.xml</execute></action>
+    </item>
+    <item label="autostart">
+      <action name="Execute"><execute>x-terminal-emulator -e mcedit ~/.config/openbox/autostart</execute></action>
+    </item>
+    <separator />
+    <item label="ObConf">
+      <action name="Execute"><execute>obconf</execute></action>
+    </item>
+    <item label="Reconfigure">
+      <action name="Reconfigure" />
+    </item>
+    <item label="Restart">
+      <action name="Restart" />
+    </item>
+  <separator />
+  <item label="Exit">
+    <action name="Exit" />
+  </item>
+  </menu>
+  <menu id="settings-menu" label="Settings">
+    <item label="cinnamon-settings">
+      <action name="Execute"><execute>cinnamon-settings</execute></action>
+    </item>
+    <item label=".conkyrc">
+      <action name="Execute"><execute>x-terminal-emulator -e mcedit ~/.conkyrc</execute></action>
+    </item>
+    <item label="lxappearance">
+      <action name="Execute"><execute>lxappearance</execute></action>
+    </item>
+  </menu>
+  <menu id="client-list-menu" />
+</menu>
+
+</openbox_menu>

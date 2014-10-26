@@ -1,0 +1,37 @@
+# here is my autostart
+
+
+#gnome-settings-daemon &
+
+# set up keyboard layout and switch scheme
+(sleep 5 && setxkbmap -option grp:switch,grp:caps_toggle,grp_led:scroll us,ru) &
+
+#turn on numlock
+numlockx &
+
+# set desktop background image
+feh --bg-fill /home/anton/.wallpapers/bulutsu-green-1366x768.png &
+
+# OSD (does not work for me)
+# osdsh &
+
+# panel
+lxpanel &
+
+# sound regulator on panel
+#gnome-sound-applet &
+
+#conky
+(sleep 5 && conky) &
+
+#tint2 &
+
+# for automount:
+(sleep 4 && pcmanfm -d) &
+
+/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh &
+
+(sleep 10 && run-pidgin) &
+
+(sleep 8 && run-thunderbird) &
+

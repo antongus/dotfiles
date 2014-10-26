@@ -1,0 +1,43 @@
+! .Xresources file.
+! When changed, run xrdb -merge ~/.Xresources to merge changes.
+!
+! term names:
+XTerm*termName: xterm-256color
+UXterm*termName: xterm-256color
+URxvt*termName: xterm-256color
+gnome-terminal*termName: xterm-256color
+!
+! Xft settings ---------------------------------------------------------------
+!
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+!Xft.hintstyle:  hintnone hintslight hintmedium hintfull
+Xft.hintstyle:  hintslight
+!
+!
+!XTerm*eightBitInput: false
+XTerm*metaSendsEscape: true
+XTerm*utf8Title: true
+XTerm*background: black
+XTerm*foreground: white
+XTerm*cursorColor: green
+XTerm*renderFont: true
+XTerm*selectToClipboard: true
+!xterm*utf8:               2
+XTerm*faceName: Liberation Mono
+!XTerm*faceName: Terminus
+!XTerm*faceName: Droid Sans Mono
+!XTerm*faceName: Monospace
+XTerm*faceSize: 12
+XTerm*curses:  on 
+XTerm*vt100*geometry:   128x40
+XTerm*saveLines: 4096
+!xterm*iconFile:	   /usr/share/icons/Mint-X/apps/22/xterm.png
+xterm*iconPixmap:  /home/anton/.icons/xterm-color_48x48.xbm
+xterm*iconMask:    /home/anton/.icons/xterm-color_48x48-mask.xbm
+!xterm*iconPixmap:  /usr/share/pixmaps/xterm-color_48x48.xpm
+!xterm*activeIcon: true
+!XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48
+XTerm*iconName: XTerm
