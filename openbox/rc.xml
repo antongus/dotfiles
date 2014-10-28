@@ -200,6 +200,12 @@
         <command>dmenu_run</command>
       </action>
     </keybind>
+    <!-- Lock screen -->
+    <keybind key="W-L">
+      <action name="Execute">
+        <command>slock</command>
+      </action>
+    </keybind>
     <!-- Midnight Commander -->
     <keybind key="W-M">
       <action name="Execute">
