@@ -236,6 +236,48 @@
         <command>/opt/eclipse/eclipse</command>
       </action>
     </keybind>
+    <!-- Eclipse lUna -->
+    <keybind key="W-U">
+      <action name="Execute">
+        <command>/opt/eclipse-luna/eclipse</command>
+      </action>
+    </keybind>
+    <!-- Keychain to run serial terminals -->
+    <keybind key="W-s">
+      <!-- Terminals at 115200 baud -->
+      <keybind key="W-0">
+        <action name="Execute">
+          <command>/usr/bin/putty -load usb-ttyUSB0</command>
+        </action>
+      </keybind>
+      <keybind key="W-1">
+        <action name="Execute">
+          <command>/usr/bin/putty -load usb-ttyUSB1</command>
+        </action>
+      </keybind>
+      <keybind key="W-2">
+        <action name="Execute">
+          <command>/usr/bin/putty -load usb-ttyUSB2</command>
+        </action>
+      </keybind>
+      <!-- Terminals at 38400 baud -->
+      <keybind key="0">
+        <action name="Execute">
+          <command>/usr/bin/putty -load usb-ttyUSB0-38400</command>
+        </action>
+      </keybind>
+      <keybind key="1">
+        <action name="Execute">
+          <command>/usr/bin/putty -load usb-ttyUSB1-38400</command>
+        </action>
+      </keybind>
+      <keybind key="2">
+        <action name="Execute">
+          <command>/usr/bin/putty -load usb-ttyUSB2-38400</command>
+        </action>
+      </keybind>
+    </keybind>
+
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
