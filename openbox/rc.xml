@@ -236,10 +236,10 @@
         <command>/opt/eclipse/eclipse</command>
       </action>
     </keybind>
-    <!-- Eclipse lUna -->
-    <keybind key="W-U">
+    <!-- Qt creator -->
+    <keybind key="W-Q">
       <action name="Execute">
-        <command>/opt/eclipse-luna/eclipse</command>
+        <command>/opt/Qt/Tools/QtCreator/bin/qtcreator</command>
       </action>
     </keybind>
     <!-- Keychain to run serial terminals -->
@@ -934,6 +934,15 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
           <y>0</y>
        </position>
       </application>
+
+<!--
+      <application class="Eclipse" type="normal">
+        <position force="no">
+          <x>300</x>
+          <y>0</y>
+       </position>
+      </application>
+-->
 
       <application class="Skype" type="normal" role="">
         <position force="yes">

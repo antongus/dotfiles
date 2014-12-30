@@ -22,7 +22,7 @@
   <item label="Thunderbird mail" icon="/usr/share/pixmaps/thunderbird.png">
     <action name="Execute"><execute>run-thunderbird</execute></action>
   </item>
-  <item label="Eclipse" icon="/usr/share/icons/hicolor/22x22/apps/eclipse.png">
+  <item label="Eclipse" icon="/usr/share/icons/Mint-X/apps/24/eclipse.png">
     <action name="Execute"><execute>/opt/eclipse/eclipse</execute></action>
   </item>
   <item label="Pidgin" icon="/usr/share/icons/hicolor/24x24/apps/pidgin.png">
