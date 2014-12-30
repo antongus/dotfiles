@@ -151,6 +151,8 @@ ${color #BBBBBB}RAM Usage:${color} $mem/$memmax - $memperc% ${membar 4}
 ${color #BBBBBB}Swap Usage:${color} $swap/$swapmax - $swapperc% ${swapbar 4}
 ${color #BBBBBB}CPU1 (${color}${execi 8 sensors | grep Core\ 0: | sed 's/.*:[ ]*\([^ ]*\).*/\1/'}):${color} ${cpu cpu1}% ${cpubar cpu1 4}
 ${color #BBBBBB}CPU2 (${color}${execi 8 sensors | grep Core\ 1: | sed 's/.*:[ ]*\([^ ]*\).*/\1/'}):${color} ${cpu cpu2}% ${cpubar cpu2 4}
+${color #BBBBBB}CPU3 (${color}${execi 8 sensors | grep Core\ 2: | sed 's/.*:[ ]*\([^ ]*\).*/\1/'}):${color} ${cpu cpu3}% ${cpubar cpu3 4}
+${color #BBBBBB}CPU4 (${color}${execi 8 sensors | grep Core\ 3: | sed 's/.*:[ ]*\([^ ]*\).*/\1/'}):${color} ${cpu cpu4}% ${cpubar cpu4 4}
 ${cpugraph 20 green}
 ${color #BBBBBB}Processes:${color} $processes  ${color #BBBBBB}Running:${color} $running_processes
 HDD $hr
