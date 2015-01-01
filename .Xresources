@@ -34,10 +34,11 @@ XTerm*faceSize: 12
 XTerm*curses:  on 
 XTerm*vt100*geometry:   128x40
 XTerm*saveLines: 4096
-!xterm*iconFile:	   /usr/share/icons/Mint-X/apps/22/xterm.png
-xterm*iconPixmap:  /home/anton/.icons/xterm-color_48x48.xbm
-xterm*iconMask:    /home/anton/.icons/xterm-color_48x48-mask.xbm
-!xterm*iconPixmap:  /usr/share/pixmaps/xterm-color_48x48.xpm
-!xterm*activeIcon: true
-!XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48
 XTerm*iconName: XTerm
+
+*VT100.Translations: #override \
+  Shift <Key>Insert: insert-selection(CLIPBOARD) \n\
+  ~Shift <Btn1Up>: select-end(PRIMARY, CUT_BUFFER0) \n\
+  Shift <Btn1Up>: select-end(CLIPBOARD, CUT_BUFFER1) \n\
+  ~Shift ~Ctrl ~Meta <Btn2Up>:insert-selection(PRIMARY, CUT_BUFFER0) \n\
+  Shift ~Ctrl ~Meta <Btn2Up>:insert-selection(CLIPBOARD, CUT_BUFFER1)
