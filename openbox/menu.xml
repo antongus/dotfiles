@@ -32,7 +32,7 @@
     <action name="Execute"><execute>/opt/deadbeef-0.6.1/deadbeef</execute></action>
   </item>
   <item label="Qt Creator" icon="/usr/share/icons/Mint-X/apps/24/qtcreator.png">
-    <action name="Execute"><execute>/opt/Qt/Tools/QtCreator/bin/qtcreator</execute></action>
+    <action name="Execute"><execute>/opt/Qt5.4.1/Tools/QtCreator/bin/qtcreator</execute></action>
   </item>
   <item label="KiCAD" icon="/home/anton/.icons/kicad.png">
       <action name="Execute"><execute>kicad</execute></action>

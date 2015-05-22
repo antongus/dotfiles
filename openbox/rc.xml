@@ -239,7 +239,7 @@
     <!-- Qt creator -->
     <keybind key="W-Q">
       <action name="Execute">
-        <command>/opt/Qt/Tools/QtCreator/bin/qtcreator</command>
+        <command>/opt/Qt5.4.1/Tools/QtCreator/bin/qtcreator</command>
       </action>
     </keybind>
     <!-- Keychain to run serial terminals -->

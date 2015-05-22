@@ -33,5 +33,6 @@ lxpanel &
 
 (sleep 10 && run-pidgin) &
 
-(sleep 8 && run-thunderbird) &
+(sleep 15 && run-thunderbird) &
 
+(sleep 20 && skype) &

@@ -133,17 +133,8 @@ source_codepage=UTF-8
 timeformat_recent=%b %e %H:%M
 timeformat_old=%b %e  %Y
 autodetect_codeset=
-clipboard_store=xclip -i
-clipboard_paste=xclip -o
-
-
-
-
-
-
-
-
-
+clipboard_store=xclip -i -selection clipboard
+clipboard_paste=xclip -o -selection clipboard
 
 
 
@@ -165,7 +156,7 @@ expanded_view_of_groups=0
 kilobyte_si=false
 mix_all_files=false
 show_backups=true
-show_dot_files=false
+show_dot_files=true
 fast_reload=false
 fast_reload_msg_shown=false
 mark_moves_down=true
@@ -190,7 +181,7 @@ file_shell_pattern=true
 file_find_recurs=true
 file_skip_hidden=false
 file_all_charsets=false
-content_use=false
+content_use=true
 content_case_sens=true
 content_regexp=false
 content_first_hit=false
