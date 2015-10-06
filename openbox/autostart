@@ -37,4 +37,7 @@ lxpanel &
 # start thunderbird if USB disk with profile is mounted
 (sleep 15 && run-thunderbird) &
 
+#start mytetra
+(sleep 20 && run-mytetra) &
+
 #(sleep 20 && skype) &
