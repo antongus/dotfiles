@@ -31,7 +31,7 @@ lxpanel &
 
 /usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh &
 
-(sleep 10 && run-pidgin) &
+(sleep 16 && run-pidgin) &
 
 (sleep 15 && run-thunderbird) &
 

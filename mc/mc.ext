@@ -439,14 +439,14 @@ regex/\.([mM][iI][dD][iI]?|[rR][mM][iI][dD]?)$
 	Open=timidity %f
 
 regex/\.([wW][mM][aA])$
-	Open=mplayer -vo null %f
-	View=%view{ascii} mplayer -quiet -slave -frames 0 -vo null -ao null -identify %f 2>/dev/null | tail +13 || file %f
+	Open=mpv -vo null %f
+	View=%view{ascii} mpv -quiet -slave -frames 0 -vo null -ao null -identify %f 2>/dev/null | tail +13 || file %f
 
 
 ### Play lists ###
 
 regex/\.([mM]3[uU]|[pP][lL][sS])$
-	Open=if [ -z "$DISPLAY" ]; then mplayer -vo null -playlist %f; else (xmms -p %f >/dev/null 2>&1 &); fi
+	Open=if [ -z "$DISPLAY" ]; then mpv -vo null -playlist %f; else (xmms -p %f >/dev/null 2>&1 &); fi
 
 
 ### Video ###
@@ -489,7 +489,7 @@ regex/\.([rR][aA]?[mM])$
 	Open=(realplay %f >/dev/null 2>&1 &)
 
 include/video
-	Open=(mplayer %f >/dev/null 2>&1 &)
+	Open=(mpv %f >/dev/null 2>&1 &)
 	#Open=(gtv %f >/dev/null 2>&1 &)
 	#Open=(xanim %f >/dev/null 2>&1 &)
 
@@ -504,7 +504,8 @@ type/^PostScript
 
 # PDF
 type/^PDF
-	Open=(evince %f >/dev/null 2>&1 &)
+#	Open=(evince %f >/dev/null 2>&1 &)
+	Open=(nohup evince %f >/dev/null 2>&1 &)
 	#Open=(acroread %f &)
 	#Open=(ghostview %f &)
 	View=%view{ascii} pdftotext %f -
