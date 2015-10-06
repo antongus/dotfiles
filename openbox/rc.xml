@@ -40,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Clearlooks-Phenix</name>
+    <name>Clearlooks</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -55,10 +55,10 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Liberation Sans</name>
+      <name>Liberation Sans Narrow Bold Condensed</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
@@ -196,7 +196,7 @@
     <!-- RUN command -->
     <keybind key="W-R">
       <action name="Execute">
-<!--        <command>gmrun</command>  -->
+        <!--        <command>gmrun</command>  -->
         <command>dmenu_run</command>
       </action>
     </keybind>
@@ -239,7 +239,7 @@
     <!-- Qt creator -->
     <keybind key="W-Q">
       <action name="Execute">
-        <command>/opt/Qt/Tools/QtCreator/bin/qtcreator</command>
+        <command>/opt/Qt5.4.1/Tools/QtCreator/bin/qtcreator</command>
       </action>
     </keybind>
     <!-- Keychain to run serial terminals -->
@@ -277,7 +277,6 @@
         </action>
       </keybind>
     </keybind>
-
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
@@ -922,20 +921,18 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
       </application>
 
 -->
-      <!-- remove decor from xterm windows -->
-      <application class="XTerm">
-        <decor>no</decor>
-        <shade>no</shade>
-      </application>
-
-      <application class="Firefox" type="normal">
-        <position force="no">
-          <x>300</x>
-          <y>0</y>
-       </position>
-      </application>
-
-<!--
+    <!-- remove decor from xterm windows -->
+    <application class="XTerm">
+      <decor>no</decor>
+      <shade>no</shade>
+    </application>
+    <application class="Firefox" type="normal">
+      <position force="no">
+        <x>300</x>
+        <y>0</y>
+      </position>
+    </application>
+    <!--
       <application class="Eclipse" type="normal">
         <position force="no">
           <x>300</x>
@@ -943,13 +940,11 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
        </position>
       </application>
 -->
-
-      <application class="Skype" type="normal" role="">
-        <position force="yes">
-          <x>1</x>
-          <y>0</y>
-       </position>
-      </application>
-
+    <application class="Skype" type="normal" role="">
+      <position force="yes">
+        <x>1</x>
+        <y>0</y>
+      </position>
+    </application>
   </applications>
 </openbox_config>

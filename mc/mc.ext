@@ -106,7 +106,7 @@
 
 ### GIT Repo ###
 # gitfs changeset
-regex/^\[git\]
+regex//\[git\]
 	Open=%cd %p/changesetfs://
 	View=%cd %p/patchsetfs://
 
@@ -408,7 +408,7 @@ shell/.ico
 
 include/image
 	Open=(eog --fullscreen %f >/dev/null 2>&1 &)
-	View=%view{ascii} identify %f
+	#View=%view{ascii} identify %f
 	#View=%view{ascii} asciiview %f
 
 
@@ -489,7 +489,8 @@ regex/\.([rR][aA]?[mM])$
 	Open=(realplay %f >/dev/null 2>&1 &)
 
 include/video
-	Open=(mplayer %f >/dev/null 2>&1 &)
+	Open=(mpv %f >/dev/null 2>&1 &)
+	#Open=(mplayer %f >/dev/null 2>&1 &)
 	#Open=(gtv %f >/dev/null 2>&1 &)
 	#Open=(xanim %f >/dev/null 2>&1 &)
 

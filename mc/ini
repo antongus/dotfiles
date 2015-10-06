@@ -85,7 +85,7 @@ skin=xoria256
 keymap=mc.keymap
 auto_save_setup_panels=1
 
-filepos_max_saved_entries=4096
+filepos_max_saved_entries=1024
 
 ignore_ftp_chattr_errors=true
 
@@ -133,19 +133,8 @@ source_codepage=UTF-8
 timeformat_recent=%b %e %H:%M
 timeformat_old=%b %e  %Y
 autodetect_codeset=
-clipboard_store=xclip -i
-clipboard_paste=xclip -o
-
-
-
-
-
-
-
-
-
-
-
+clipboard_store=xclip -i -selection clipboard
+clipboard_paste=xclip -o -selection clipboard
 
 spell_language=en
 
@@ -165,7 +154,7 @@ expanded_view_of_groups=0
 kilobyte_si=false
 mix_all_files=false
 show_backups=true
-show_dot_files=false
+show_dot_files=true
 fast_reload=false
 fast_reload_msg_shown=false
 mark_moves_down=true
@@ -190,7 +179,7 @@ file_shell_pattern=true
 file_find_recurs=true
 file_skip_hidden=false
 file_all_charsets=false
-content_use=false
+content_use=true
 content_case_sens=true
 content_regexp=false
 content_first_hit=false
@@ -200,6 +189,7 @@ content_all_charsets=false
 ignore_dirs_enable=true
 
 [Panelize]
+Изменённые файлы под контролем git=git ls-files --modified
 Найти корректуры, отвергнутые командой patch=find . -name \\*.rej -print
 Найти оригиналы (*.orig) после команды patch=find . -name \\*.orig -print
-Найти программы с установленными SUID/SGID битами=find . \\( \\( -perm -04000 -a -perm +011 \\) -o \\( -perm -02000 -a -perm +01 \\) \\) -print
+Найти программы с установленными SUID/SGID битами=find . \\( \\( -perm -04000 -a -perm /011 \\) -o \\( -perm -02000 -a -perm /01 \\) \\) -print

@@ -1,5 +1,7 @@
 # here is my autostart
 
+# start keyring daemon (does not work properly)
+/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg &
 
 #gnome-settings-daemon &
 
@@ -29,9 +31,9 @@ lxpanel &
 # for automount:
 (sleep 4 && pcmanfm -d) &
 
-/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh &
+# start pidgin if USB disk with profile is mounted
+(sleep 12 && run-pidgin) &
 
-(sleep 10 && run-pidgin) &
-
-(sleep 8 && run-thunderbird) &
+# start thunderbird if USB disk with profile is mounted
+(sleep 14 && run-thunderbird) &
 
