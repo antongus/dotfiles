@@ -32,8 +32,9 @@ lxpanel &
 (sleep 4 && pcmanfm -d) &
 
 # start pidgin if USB disk with profile is mounted
-(sleep 12 && run-pidgin) &
+(sleep 16 && run-pidgin) &
 
 # start thunderbird if USB disk with profile is mounted
-(sleep 14 && run-thunderbird) &
+(sleep 15 && run-thunderbird) &
 
+#(sleep 20 && skype) &
