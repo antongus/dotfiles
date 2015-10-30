@@ -932,6 +932,25 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <y>0</y>
       </position>
     </application>
+
+    <!-- qt creator -->
+    <application name="qtcreator" class="QtCreator" title="Qt Creator" type="normal">
+      <desktop>2</desktop>
+      <position force="no">
+        <x>300</x>
+        <y>0</y>
+      </position>
+      <fullscreen>yes</fullscreen>
+    </application>
+
+    <!-- Pidgin conversation window -->
+    <application name="Pidgin" class="Pidgin" role="conversation" type="normal">
+      <position force="no">
+        <x>0</x>
+        <y>-0</y>
+      </position>
+    </application>
+
     <!--
       <application class="Eclipse" type="normal">
         <position force="no">
