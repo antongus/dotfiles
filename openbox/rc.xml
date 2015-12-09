@@ -940,7 +940,6 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <x>300</x>
         <y>0</y>
       </position>
-      <fullscreen>yes</fullscreen>
     </application>
 
     <!-- Pidgin conversation window -->
