@@ -6,7 +6,8 @@
 #gnome-settings-daemon &
 
 # set up keyboard layout and switch scheme
-(sleep 5 && setxkbmap -option grp:switch,grp:caps_toggle,grp_led:scroll us,ru) &
+#(sleep 5 && setxkbmap -option grp:switch,grp:caps_toggle,grp_led:scroll us,ru) &
+(sleep 5 && setxkbmap -option grp:switch,grp:caps_toggle,grp_led:scroll,compose:ralt us,ru) &
 
 #turn on numlock
 numlockx &
