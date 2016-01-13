@@ -239,7 +239,7 @@
     <!-- Qt creator -->
     <keybind key="W-Q">
       <action name="Execute">
-        <command>/opt/Qt5.4.1/Tools/QtCreator/bin/qtcreator</command>
+        <command>/opt/Qt5.5.1/Tools/QtCreator/bin/qtcreator</command>
       </action>
     </keybind>
     <!-- Keychain to run serial terminals -->
@@ -940,6 +940,7 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <x>300</x>
         <y>0</y>
       </position>
+
     </application>
 
     <!-- Pidgin conversation window -->
