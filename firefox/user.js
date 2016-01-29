@@ -402,3 +402,19 @@ user_pref("security.tls.insecure_fallback_hosts", "");
 // описанной в CVE-2009-3555).
 // https://wiki.mozilla.org/Security:Renegotiation
 user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
+
+// Отключает Service Worker API, позволяющее сайтам запускать скрипты, которые могут заниматься
+// различной сомнительной самодеятельностью (примеры по ссылкам ниже) в фоновом режиме, даже
+// если у пользователя не открыто ни одной вкладки этого сайта.
+// Посмотреть и удалить установленные сайтами Service Workers можно через about:serviceworkers
+// https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API#Other_use_case_ideas
+// https://github.com/slightlyoff/ServiceWorker
+// https://serviceworke.rs/
+user_pref("dom.serviceWorkers.enabled", false);
+user_pref("dom.serviceWorkers.interception.enabled", false);
+user_pref("dom.serviceWorkers.interception.opaque.enabled", false);
+user_pref("dom.serviceWorkers.openWindow.enabled", false);
+// https://hg.mozilla.org/releases/mozilla-release/file/7eabe4d30cde/modules/libpref/init/all.js#l163
+// https://hg.mozilla.org/releases/mozilla-release/file/7eabe4d30cde/dom/workers/ServiceWorkerManager.cpp#l2593
+user_pref("dom.serviceWorkers.testUpdateOverOneDay", false);
+user_pref("dom.webnotifications.serviceworker.enabled", false);
