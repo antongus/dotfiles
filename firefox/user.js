@@ -418,3 +418,41 @@ user_pref("dom.serviceWorkers.openWindow.enabled", false);
 // https://hg.mozilla.org/releases/mozilla-release/file/7eabe4d30cde/dom/workers/ServiceWorkerManager.cpp#l2593
 user_pref("dom.serviceWorkers.testUpdateOverOneDay", false);
 user_pref("dom.webnotifications.serviceworker.enabled", false);
+
+// Отключает Push API, позволяющий веб-приложениям регистрировать идентификатор на сервере Мозиллы,
+// чтобы сайт приложения оставлял там уведомления, которые пользователь получит, когда выйдет онлайн.
+// https://developer.mozilla.org/en-US/docs/Web/API/Push_API
+// https://wiki.mozilla.org/Security/Reviews/Push_API
+// https://wiki.mozilla.org/Privacy/Reviews/Push_API
+// https://bugzilla.mozilla.org/show_bug.cgi?id=1038811
+// https://bugzilla.mozilla.org/show_bug.cgi?id=1153499
+user_pref("dom.push.enabled", false);
+user_pref("dom.push.serverURL", "");
+user_pref("dom.push.userAgentID", "");
+// https://hg.mozilla.org/releases/mozilla-beta/file/e549349b8d66/modules/libpref/init/all.js#l4237
+user_pref("dom.push.connection.enabled", false);
+user_pref("dom.push.adaptive.enabled", false);
+user_pref("dom.push.udp.wakeupEnabled", false);
+// https://hg.mozilla.org/releases/mozilla-beta/file/00bcc10b3bdc/modules/libpref/init/all.js#l4445
+// https://hg.mozilla.org/releases/mozilla-beta/file/00bcc10b3bdc/dom/push/PushRecord.jsm#l59
+user_pref("dom.push.maxQuotaPerSubscription", 0);
+
+// Отключает Simple Push API - нестандартную альтернативу Push API от Mozilla. В данный момент
+// используется только на Firefox OS, но возможно будет портировано и на десктопную версию.
+// https://wiki.mozilla.org/Security/Reviews/SimplePush
+user_pref("services.push.enabled", false);
+user_pref("services.push.serverURL", "");
+
+// Отключает Selection Events, позволяющие странице реагировать на выделение пользователем текста на ней.
+// NB: Сам Selection API эта настройка _не_ отключает и window.getSelection() все еще будет работать.
+// https://developer.mozilla.org/en-US/Firefox/Releases/43#Miscellaneous
+// https://developer.mozilla.org/en-US/docs/Web/API/Selection
+user_pref("dom.select_events.enabled", false);
+
+// Отключает Clipboard Events, которые позволяют страницам узнавать, какая их часть была скопирована в буфер
+// обмена, подменять скопированное, перехватывать вставку из буфера и реагировать на нее особым образом
+// (например загружать находящуюся в буфере обмена картинку в сообщение почты или чата).
+// Ломает копирование текста из редактора Stylish.
+// https://w3c.github.io/clipboard-apis/#clipboard-event-interfaces
+user_pref("dom.event.clipboardevents.enabled", false);
+
