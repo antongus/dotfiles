@@ -34,6 +34,9 @@
   <item label="Qt Creator" icon="/usr/share/icons/Mint-X/apps/24/qtcreator.png">
     <action name="Execute"><execute>/opt/Qt5.5.1/Tools/QtCreator/bin/qtcreator</execute></action>
   </item>
+  <item label="PyCharm" icon="/opt/pycharm-community-5.0.4/bin/pycharm.png">
+    <action name="Execute"><execute>/opt/pycharm-community-5.0.4/bin/pycharm.sh</execute></action>
+  </item>
   <item label="KiCAD" icon="/home/anton/.icons/kicad.png">
       <action name="Execute"><execute>kicad</execute></action>
   </item>
