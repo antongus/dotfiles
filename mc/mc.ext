@@ -551,11 +551,12 @@ regex/\.([rR][tT][fF])$
 # Microsoft Excel Worksheet
 regex/\.([xX][lL][sSwW])$
 	Open=(libreoffice %f >/dev/null 2>&1 &)
-#	Open=(gnumeric %f >/dev/null 2>&1 &)
+	View=%view{ascii} xls2csv %f || strings %f
+regex/\.([xX][lL][sS][xX])$
+	Open=(libreoffice %f >/dev/null 2>&1 &)
 	View=%view{ascii} xls2csv %f || strings %f
 type/^Microsoft\ Excel
 	Open=(libreoffice %f >/dev/null 2>&1 &)
-#	Open=(gnumeric %f >/dev/null 2>&1 &)
 	View=%view{ascii} xls2csv %f || strings %f
 
 # Use OpenOffice.org to open any MS Office documents
