@@ -40,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Clearlooks</name>
+    <name>Clearlooks-3.4</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -55,8 +55,8 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Liberation Sans Narrow Bold Condensed</name>
-      <size>9</size>
+      <name>Liberation Sans</name>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -65,7 +65,7 @@
     </font>
     <font place="InactiveWindow">
       <name>Liberation Sans</name>
-      <size>9</size>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -239,7 +239,7 @@
     <!-- Qt creator -->
     <keybind key="W-Q">
       <action name="Execute">
-        <command>/opt/Qt5.4.1/Tools/QtCreator/bin/qtcreator</command>
+        <command>/opt/Qt5.6.0/Tools/QtCreator/bin/qtcreator</command>
       </action>
     </keybind>
     <!-- Keychain to run serial terminals -->
@@ -932,7 +932,6 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <y>0</y>
       </position>
     </application>
-
     <!-- qt creator -->
     <application name="qtcreator" class="QtCreator" title="Qt Creator" type="normal">
       <desktop>2</desktop>
@@ -941,7 +940,6 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <y>0</y>
       </position>
     </application>
-
     <!-- Pidgin conversation window -->
     <application name="Pidgin" class="Pidgin" role="conversation" type="normal">
       <position force="no">
@@ -949,7 +947,6 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <y>-0</y>
       </position>
     </application>
-
     <!--
       <application class="Eclipse" type="normal">
         <position force="no">

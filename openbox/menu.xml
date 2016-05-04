@@ -32,7 +32,10 @@
     <action name="Execute"><execute>/opt/deadbeef-0.6.1/deadbeef</execute></action>
   </item>
   <item label="Qt Creator" icon="/usr/share/icons/Mint-X/apps/24/qtcreator.png">
-    <action name="Execute"><execute>/opt/Qt5.4.1/Tools/QtCreator/bin/qtcreator</execute></action>
+    <action name="Execute"><execute>/opt/Qt5.6.0/Tools/QtCreator/bin/qtcreator</execute></action>
+  </item>
+  <item label="PyCharm" icon="/opt/pycharm-community-5.0.4/bin/pycharm.png">
+    <action name="Execute"><execute>/opt/pycharm-community-5.0.4/bin/pycharm.sh</execute></action>
   </item>
   <item label="KiCAD" icon="/home/anton/.icons/kicad.png">
       <action name="Execute"><execute>kicad</execute></action>
@@ -91,6 +94,9 @@
     <separator />
     <item label="ObConf">
       <action name="Execute"><execute>obconf</execute></action>
+    </item>
+    <item label="LxAppearance">
+      <action name="Execute"><execute>lxappearance</execute></action>
     </item>
     <item label="Reconfigure">
       <action name="Reconfigure" />
