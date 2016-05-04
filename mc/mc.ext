@@ -390,6 +390,9 @@ type/^PGM
 type/^PPM
 	Include=image
 
+type/^SVG
+	Include=image
+
 type/^Netpbm
 	Include=image
 
