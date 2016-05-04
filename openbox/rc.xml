@@ -939,9 +939,11 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <x>300</x>
         <y>0</y>
       </position>
+
     </application>
     <!-- Pidgin conversation window -->
     <application name="Pidgin" class="Pidgin" role="conversation" type="normal">
+      <desktop>all</desktop>
       <position force="no">
         <x>0</x>
         <y>-0</y>

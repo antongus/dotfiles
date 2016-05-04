@@ -38,8 +38,12 @@ T       Correct time for JPEG-s
 	echo "../$tar.tar.7z created."
 
 + t r | t d
-c       Compare to opposite
-	meld %f %D/%f &
+c       Compare to opposite (same name)
+	meld %f %D/%f > /dev/null 2>&1 &
+
++ t r | t d
+d       Compare to opposite (different names)
+	meld %f %D/%F > /dev/null 2>&1 &
 
 = t r
 + ! t t
