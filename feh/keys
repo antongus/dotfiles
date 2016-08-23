@@ -1,0 +1,24 @@
+# ~/.config/feh/keys
+
+#unbind some actions
+save_filelist
+orient_1
+orient_3
+flip
+remove
+action_0
+action_1
+action_2
+action_3
+action_4
+action_5
+action_6
+action_7
+action_8
+action_9
+action_2
+
+toggle_fullscreen    f
+toggle_exif          e
+zoom_default         1
+zoom_fit             0
