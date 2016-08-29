@@ -410,7 +410,13 @@ shell/.ico
 	Include=image
 
 include/image
-	Open=(eog --fullscreen %f >/dev/null 2>&1 &)
+#	Open=(eog --fullscreen %f >/dev/null 2>&1 &)
+#	Open=(gthumb --fullscreen %f >/dev/null 2>&1 &)
+#	Open=(ristretto --fullscreen %f >/dev/null 2>&1 &)
+	Open=(feh -d --draw-tinted -F --start-at %p * >/dev/null 2>&1 &)
+
+#	Open=(gwenview --fullscreen %f >/dev/null 2>&1 &)
+
 	#View=%view{ascii} identify %f
 	#View=%view{ascii} asciiview %f
 
@@ -428,7 +434,7 @@ regex/\.([wW][aA][wW]22)$
        Open=vplay -s 22 %f
 
 regex/\.([mM][pP]3)$
-	Open=if [ "$DISPLAY" = "" ]; then mpg123 %f; else (deadbeef %f >/dev/null 2>&1 &); fi
+	Open=if [ "$DISPLAY" = "" ]; then mpg123 %f; else (/opt/deadbeef/deadbeef %f >/dev/null 2>&1 &); fi
 	View=%view{ascii} mpg123 -vtn1 %f 2>&1 | sed -n '/^Title/,/^Comment/p;/^MPEG/,/^Audio/p'
 
 regex/\.([oO][gG][gG|aA|vV|xX])$
