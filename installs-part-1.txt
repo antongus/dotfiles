@@ -1,0 +1,88 @@
+xterm                         - терминал
+mc                            - файловый менеджер
+meld                          - программа сравнения
+git gitk git-man git-svn      - система контроля версий
+subversion                    - туда же
+build-essential               - всё необходимое для компиляции
+autoconf automake             - туда же
+make cmake                    - тоже для сборки
+p7zip-full p7zip-rar          - архиватор
+cabextract                    - распаковщик *.cab файлов
+unrar                         - распаковщик *.rar файлов
+unshield                      - распаковщик installshield инсталляторов
+unzip                         - распаковщик *.zip файлов
+default-jre default-jdk       - java (для эклипсы)
+blender                       - программа трёхмерного моделирования
+browser-plugin-vlc            - плагин для просмотра видео в браузере
+cheese                        - программа для веб-камеры
+conky                         - рисовалка состояния системы на десктопе
+cowsay                        - очень полезная программа
+cppcheck                      - статический анализатор c/c++ 
+dia                           - рисовалка диаграмм
+dkms                          - 
+dos2unix                      - конвертер окончаний строк из DOS-формата в UNIX-формат
+dosbox                        - эмулятор DOS
+doxygen                       - генератор документации из исходного кода
+eog                           - просмотрщик изображений
+evince                        - просмотрщик pdf djvu 
+fceux                         - эмулятор консоли NES (Dendy)
+feh                           - просмотрщик изображений (нужен для установки фонового изображения в openbox)
+fonts-inconsolata             - какой-то шрифт
+gimp gimp-help-ru             - графический редактор
+inkscape                      - векторный редактор
+gparted                       - редактор дисковых разделов
+htop                          - диспетчер задач
+powertop                      - программа мониторинга энергопотребления
+hunspell-ru-ie-yo             - словарь с ё (ещё не поставил, он в ppa)
+openbox                       - оконный менеджер
+lxpanel                       - панель для openbox
+lxappearance                  - редактор настроек для openbox
+pcmanfm                       - файловый менеджер
+xclip xsel                    - программа для работы с буфером обмена
+ipython                       - интерактивный питон
+jhead                         - программа для редактирования свойств цифровых фотографий
+jfsutils                      - утилиты для работы с файловой системой jfs
+keepassx                      - хранитель паролей
+klavaro                       - клавиатурный тренажёр
+lame                          - кодировщик mp3
+lingot                        - настройщик музыкальных инструментов
+links2                        - текстовый веб-браузер
+lynx                          - текстовый веб-браузер
+madplay                       - консольный проигрыватель музыкальных файлов
+mkvtoolnix-gui mkvtoolnix     - редактор mkv
+mpv                           - видеоплеер
+numlockx                      - программа для установки numlock
+odt2txt                       - конвертер odt в txt
+openpref                      - преферанс
+putty                         - эмулятор терминала (использую для последовательных портов)
+python-matplotlib             - питоновские библиотеки
+python-numpy python-scipy     - питоновские библиотеки
+python-pygame python-serial   - питоновские библиотеки
+recoll                        - программа полнотекстового поиска на диске
+remmina                       - клиент VNC
+smartmontools                 - утилиты для работы с дисками (чтение SMART информации)
+speedcrunch                   - калькулятор
+suckless-tools                - тут dmenu
+testdisk                      - лечилка дисков
+timidity                      - программный MIDI-синтезатор
+timidity-interfaces-extra     - доп. инструменты для него
+freepats                      - свободные MIDI инструменты
+fluid-soundfont-gm            - ещё какой-то "звуковой шрифт"
+tmux                          - терминальный мультиплексор
+unetbootin                    - программа для создания загрузочной флешки
+unison                        - синхронизатор директорий
+vim-nox vim-doc               - текстовый редактор
+vim-addon-manager vim-scripts - дополнения для vim
+virtualbox                    - система виртуализации
+virtualbox-guest-additions-iso - гостевые дополнения для virtualbox
+vlc                           - видеопроигрыватель
+wine                          - запускалка виндовых программ
+wmctrl                        - консольный управлятор окнами
+xchm                          - просмотрщик chm файлов (справка виндовс)
+xfsprogs                      - утилиты для работы с файловой системнйо xfs
+pidgin pidgin-hotkeys         - мессенджер и плагин к нему
+cifs-utils                    - утилиты для монтирования cifs (я ей монтирую сетевые виндовые шары)
+consolekit                    - чтобы выключать компьютер (dbus-send --system --print-reply --dest=«org.freedesktop.ConsoleKit» /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop)
+optipng                       - оптимизатор png. Не думаю, что буду им часто пользоваться, просто хотелось посмотреть, что это такое
+libgl1-mesa-dev               - библиотека, требуется для Qt
+arandr                        - графическая утилита для настройки второго монитора. Генерит 
