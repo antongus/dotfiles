@@ -40,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Clearlooks-3.4</name>
+    <name>MyTheme</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -91,21 +91,21 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>sans</name>
-      <size>14</size>
+      <name>Liberation Sans</name>
+      <size>12</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>sans</name>
+      <name>Liberation Sans</name>
       <size>12</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
   </theme>
@@ -331,7 +331,6 @@
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
-
     <!-- Keybindings to move windows -->
     <!-- place window to left half of screen -->
     <keybind key="W-Left">
@@ -342,7 +341,6 @@
       </action>
       <action name="MoveToEdgeWest"/>
     </keybind>
-
     <!-- place window to right half of screen -->
     <keybind key="W-Right">
       <action name="UnmaximizeFull"/>
@@ -352,14 +350,12 @@
       </action>
       <action name="MoveToEdgeEast"/>
     </keybind>
-
     <keybind key="W-Down">
       <action name="UnmaximizeFull"/>
     </keybind>
     <keybind key="W-Up">
       <action name="MaximizeFull"/>
     </keybind>
-
     <!-- Volume control -->
     <!-- set vol to 156%: pacmd set-sink-volume 0 102400 -->
     <keybind key="C-A-Up">
@@ -411,7 +407,6 @@
         </finalactions>
       </action>
     </keybind>
-
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="W-S-Up">
       <action name="DirectionalCycleWindows">
@@ -430,7 +425,6 @@
       </action>
     </keybind>
   </keyboard>
-
   <mouse>
     <dragThreshold>1</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
@@ -902,7 +896,6 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <y>0</y>
       </position>
     </application>
-
     <!-- qt creator -->
     <application name="qtcreator" class="QtCreator" title="Qt Creator" type="normal">
       <position force="no">
@@ -910,20 +903,17 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <y>0</y>
       </position>
     </application>
-
-    <!-- qt creator -->
+    <!-- Evince -->
     <application name="evince" class="Evince" type="normal">
       <position force="no">
         <x>300</x>
         <y>0</y>
       </position>
-      <size> 
+      <size>
         <width>1620</width>
         <height>1063</height>
       </size>
     </application>
-
-
     <!-- Pidgin conversation window -->
     <application name="Pidgin" class="Pidgin" role="conversation" type="normal">
       <desktop>all</desktop>
@@ -932,9 +922,8 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <y>-0</y>
       </position>
     </application>
-
     <!-- Eclipse -->
-<!--
+    <!--
     <application class="Eclipse" type="normal">
       <desktop>2</desktop>
       <decor>yes</decor>
@@ -948,7 +937,6 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
       </size>
     </application>
 -->
-
     <application class="Skype" type="normal" role="">
       <position force="yes">
         <x>1</x>

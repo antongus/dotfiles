@@ -10,13 +10,13 @@
     <action name="Execute"><execute>gmrun</execute></action>
   </item>
   <separator />  -->
-  <item label="Terminal emulator">
+  <item label="Terminal emulator" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
     <action name="Execute"><execute>x-terminal-emulator</execute></action>
   </item>
   <item label="Midnight Commander" icon="/usr/share/icons/hicolor/64x64/apps/MidnightCommander.png">
     <action name="Execute"><execute>x-terminal-emulator -e mc</execute></action>
   </item>
-  <item label="Firefox web browser" icon="/usr/share/icons/nuoveXT2/24x24/apps/firefox.png">
+  <item label="Firefox web browser" icon="/usr/share/icons/elementary-xfce/apps/22/firefox.png">
     <action name="Execute"><execute>x-www-browser</execute></action>
   </item>
   <item label="Thunderbird mail" icon="/usr/share/pixmaps/thunderbird.png">
@@ -28,10 +28,13 @@
   <item label="Pidgin" icon="/usr/share/icons/hicolor/24x24/apps/pidgin.png">
     <action name="Execute"><execute>run-pidgin</execute></action>
   </item>
+  <item label="Skype" icon="/usr/share/icons/hicolor/64x64/apps/skype.png">
+    <action name="Execute"><execute>firejail skype</execute></action>
+  </item>
   <item label="DeadBeef" icon="/opt/deadbeef-0.6.1/deadbeef.png">
     <action name="Execute"><execute>/opt/deadbeef-0.6.1/deadbeef</execute></action>
   </item>
-  <item label="Qt Creator" icon="/usr/share/icons/Mint-X/apps/24/qtcreator.png">
+  <item label="Qt Creator" icon="/opt/Qt5.6.0/5.6/Src/qtdoc/doc/images/landing/icon_Qt_78x78px.png">
     <action name="Execute"><execute>/opt/Qt5.6.0/Tools/QtCreator/bin/qtcreator</execute></action>
   </item>
   <item label="PyCharm" icon="/opt/pycharm-community-5.0.4/bin/pycharm.png">
@@ -50,35 +53,33 @@
       <action name="Execute"><execute>palimpsest</execute></action>
     </item>
   </menu>
-  <menu id="terminals-menu" label="Terminals" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
-    <item label="com1-115200" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+  <menu id="terminals-menu" label="Terminals" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
+    <item label="com1-115200" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
       <action name="Execute"><execute>/usr/bin/putty -load com1-115200</execute></action>
     </item>
-    <item label="/dev/ttyUSB0" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+    <item label="/dev/ttyUSB0" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
       <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB0</execute></action>
     </item>
-    <item label="/dev/ttyUSB0-38400" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+    <item label="/dev/ttyUSB0-38400" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
       <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB0-38400</execute></action>
     </item>
-    <item label="/dev/ttyUSB1" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+    <item label="/dev/ttyUSB1" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
       <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB1</execute></action>
     </item>
-    <item label="/dev/ttyUSB1-38400" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+    <item label="/dev/ttyUSB1-38400" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
       <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB1-38400</execute></action>
     </item>
-    <item label="/dev/ttyUSB2" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+    <item label="/dev/ttyUSB2" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
       <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB2</execute></action>
     </item>
-    <item label="com1-38400" icon="/usr/share/icons/hicolor/22x22/apps/nm-device-wired.png">
+    <item label="/dev/ttyACM0" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
+      <action name="Execute"><execute>/usr/bin/putty -load usb-ttyACM0</execute></action>
+    </item>
+    <item label="com1-38400" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
       <action name="Execute"><execute>/usr/bin/putty -load com1-38400</execute></action>
     </item>
-  </menu>
-  <menu id="sch-menu" label="PCB">
-    <item label="Schematic" icon="/home/anton/.icons/sch.png">
-      <action name="Execute"><execute>~/Misc/P-CAD\ 2001/Sch.exe</execute></action>
-    </item>
-    <item label="PCB" icon="/home/anton/.icons/pcb.png">
-      <action name="Execute"><execute>~/Misc/P-CAD\ 2001/Pcb.exe</execute></action>
+    <item label="putty" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
+      <action name="Execute"><execute>/usr/bin/putty</execute></action>
     </item>
   </menu>
   <menu id="openbox-menu" label="Openbox">
@@ -118,6 +119,9 @@
     </item>
     <item label="lxappearance">
       <action name="Execute"><execute>lxappearance</execute></action>
+    </item>
+    <item label="Software properties">
+      <action name="Execute"><execute>sudo software-properties-gtk</execute></action>
     </item>
   </menu>
   <menu id="client-list-menu" />
