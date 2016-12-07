@@ -413,7 +413,7 @@ include/image
 #	Open=(eog --fullscreen %f >/dev/null 2>&1 &)
 #	Open=(gthumb --fullscreen %f >/dev/null 2>&1 &)
 #	Open=(ristretto --fullscreen %f >/dev/null 2>&1 &)
-	Open=(feh -d --draw-tinted -F --start-at %p * >/dev/null 2>&1 &)
+	Open=(feh -d --draw-tinted -F --start-at ./%p . >/dev/null 2>&1 &)
 
 #	Open=(gwenview --fullscreen %f >/dev/null 2>&1 &)
 
@@ -651,7 +651,7 @@ regex/\.(arc|ARC)$
 	Extract (with flags)=I=%{Enter any Arc flags:}; if test -n "$I"; then arc x $I %f; fi
 
 # zip
-type/^([Zz][Ii][Pp])\ archive
+regex/\.([Zz][Ii][Pp])$
 	Open=%cd %p/uzip://
 	View=%view{ascii} unzip -v %f
 
