@@ -413,9 +413,9 @@ include/image
 #	Open=(eog --fullscreen %f >/dev/null 2>&1 &)
 #	Open=(gthumb --fullscreen %f >/dev/null 2>&1 &)
 #	Open=(ristretto --fullscreen %f >/dev/null 2>&1 &)
-	Open=(feh -d --draw-tinted -F --start-at ./%p . >/dev/null 2>&1 &)
-
 #	Open=(gwenview --fullscreen %f >/dev/null 2>&1 &)
+#	Open=(viewnior --fullscreen %f >/dev/null 2>&1 &)
+	Open=(feh -d --draw-tinted -F --start-at ./%p . >/dev/null 2>&1 &)
 
 	#View=%view{ascii} identify %f
 	#View=%view{ascii} asciiview %f

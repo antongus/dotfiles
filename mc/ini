@@ -7,7 +7,7 @@ verbose=1
 mark_moves_down=1
 pause_after_run=1
 shell_patterns=1
-auto_save_setup=1
+auto_save_setup=0
 auto_menu=0
 use_internal_view=1
 use_internal_edit=1
@@ -81,7 +81,7 @@ reverse_files_only=1
 copymove_persistent_attr=1
 select_flags=6
 editor_backup_extension=~
-skin=xoria256
+skin=modarin256-defbg
 keymap=mc.keymap
 auto_save_setup_panels=1
 
@@ -105,6 +105,10 @@ editor_group_undo=0
 editor_cursor_after_inserted_block=0
 editor_ask_filename_before_edit=0
 editor_filesize_threshold=64M
+
+editor_drop_selection_on_copy=1
+editor_state_full_filename=1
+editor_stop_format_chars=-+*\\,.;:&>
 
 [Layout]
 message_visible=0
@@ -130,8 +134,8 @@ ftpfs_password=anonymous@
 display_codepage=UTF-8
 source_codepage=UTF-8
 
-timeformat_recent=%b %e %H:%M
-timeformat_old=%b %e  %Y
+timeformat_recent=%d.%m.%Y %H:%M
+timeformat_old=%d.%m.%Y %H:%M
 autodetect_codeset=
 clipboard_store=xclip -i -selection clipboard
 clipboard_paste=xclip -o -selection clipboard
@@ -165,12 +169,14 @@ panel_scroll_pages=true
 mouse_move_pages=true
 filetype_mode=true
 permission_mode=false
-quick_search_mode=2
+quick_search_mode=0
 
 show_mini_info=true
 torben_fj_mode=false
 
 simple_swap=false
+
+select_flags=6
 
 [FindFile]
 ignore_dirs=
@@ -179,7 +185,7 @@ file_shell_pattern=true
 file_find_recurs=true
 file_skip_hidden=false
 file_all_charsets=false
-content_use=true
+content_use=false
 content_case_sens=true
 content_regexp=false
 content_first_hit=false

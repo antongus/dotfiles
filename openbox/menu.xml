@@ -17,7 +17,8 @@
     <action name="Execute"><execute>x-terminal-emulator -e mc</execute></action>
   </item>
   <item label="Firefox web browser" icon="/usr/share/icons/elementary-xfce/apps/22/firefox.png">
-    <action name="Execute"><execute>x-www-browser</execute></action>
+<!--    <action name="Execute"><execute>firejail firefox</execute></action> -->
+    <action name="Execute"><execute>firefox</execute></action>
   </item>
   <item label="Thunderbird mail" icon="/usr/share/pixmaps/thunderbird.png">
     <action name="Execute"><execute>run-thunderbird</execute></action>
@@ -39,6 +40,9 @@
   </item>
   <item label="PyCharm" icon="/opt/pycharm-community-5.0.4/bin/pycharm.png">
     <action name="Execute"><execute>/opt/pycharm-community-5.0.4/bin/pycharm.sh</execute></action>
+  </item>
+  <item label="Visual studio code">
+    <action name="Execute"><execute>/home/anton/Misc/VSCode-linux-x64/code</execute></action>
   </item>
   <item label="KiCAD" icon="/home/anton/.icons/kicad.png">
       <action name="Execute"><execute>kicad</execute></action>

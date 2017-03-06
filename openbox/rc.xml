@@ -221,7 +221,8 @@
     <!-- web browser -->
     <keybind key="W-W">
       <action name="Execute">
-        <command>x-www-browser</command>
+<!--        <command>firejail firefox</command> -->
+        <command>firefox</command>
       </action>
     </keybind>
     <!-- Calculator -->
@@ -264,6 +265,11 @@
       <keybind key="W-2">
         <action name="Execute">
           <command>/usr/bin/putty -load usb-ttyUSB2</command>
+        </action>
+      </keybind>
+      <keybind key="W-3">
+        <action name="Execute">
+          <command>/usr/bin/putty -load usb-ttyUSB3</command>
         </action>
       </keybind>
       <!-- Terminals at 38400 baud -->
