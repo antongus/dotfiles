@@ -35,8 +35,8 @@
   <item label="DeadBeef" icon="/opt/deadbeef-0.6.1/deadbeef.png">
     <action name="Execute"><execute>/opt/deadbeef-0.6.1/deadbeef</execute></action>
   </item>
-  <item label="Qt Creator" icon="/opt/Qt5.6.0/5.6/Src/qtdoc/doc/images/landing/icon_Qt_78x78px.png">
-    <action name="Execute"><execute>/opt/Qt5.6.0/Tools/QtCreator/bin/qtcreator</execute></action>
+  <item label="Qt Creator" icon="/opt/Qt5.6.2/5.6/Src/qtdoc/doc/images/landing/icon_Qt_78x78px.png">
+    <action name="Execute"><execute>/opt/Qt5.6.2/Tools/QtCreator/bin/qtcreator</execute></action>
   </item>
   <item label="PyCharm" icon="/opt/pycharm-community-5.0.4/bin/pycharm.png">
     <action name="Execute"><execute>/opt/pycharm-community-5.0.4/bin/pycharm.sh</execute></action>
@@ -47,9 +47,23 @@
   <item label="KiCAD" icon="/home/anton/.icons/kicad.png">
       <action name="Execute"><execute>kicad</execute></action>
   </item>
-  <!-- This requires the presence of the 'menu' package to work -->
-  <menu id="/Debian" />
+
+  <menu id="virtual-machines-menu" label="Virtual machines">
+    <item label="Windows 7">
+      <action name="Execute"><execute>vboxmanage startvm win7</execute></action>
+    </item>
+    <item label="Windows XP">
+      <action name="Execute"><execute>vboxmanage startvm winxp</execute></action>
+    </item>
+    <item label="Windows 10">
+      <action name="Execute"><execute>vboxmanage startvm "MSEdge - Win10_preview"</execute></action>
+    </item>
+  </menu>
+
   <menu id="misc-menu" label="Misc">
+    <item label="MyTetra">
+      <action name="Execute"><execute>run-mytetra</execute></action>
+    </item>
     <item label="Keepass" icon="/usr/share/icons/hicolor/24x24/apps/keepassx.png">
       <action name="Execute"><execute>keepassx</execute></action>
     </item>

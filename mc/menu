@@ -13,11 +13,17 @@ shell_patterns=0
 1       Nautilus here
 	nautilus %d &
 
+2       Convert DOS line endings to Unix one
+	dos2unix * &
+
 J       Auto-rotate JPEG-s
 	jhead -ft -autorot *.[Jj][Pp][Gg]
 
 T       Correct time for JPEG-s
 	jhead -ft *.[Jj][Pp][Gg]
+
+S       Scale jpegs to 1920x1080 (to separate directory)
+	scale-images-1920
 
 2       Compress the current subdirectory (tar.bz2)
 	Pwd=`basename %d /`

@@ -56,6 +56,7 @@ user_pref("browser.tabs.animate", false);
 // используемую для формирования поисковых подсказок.
 //user_pref("browser.search.suggest.enabled", false);
 //user_pref("browser.urlbar.suggest.searches", false);
+user_pref("browser.urlbar.unifiedcomplete", false);
 
 // Отключает поиск через адресную строку без заданных поисковикам префиксов-кейвордов.
 // http://kb.mozillazine.org/Keyword.enabled
@@ -427,6 +428,7 @@ user_pref("dom.webnotifications.serviceworker.enabled", false);
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1038811
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1153499
 user_pref("dom.push.enabled", false);
+user_pref("dom.webnotifications.enabled", false);
 user_pref("dom.push.serverURL", "");
 user_pref("dom.push.userAgentID", "");
 // https://hg.mozilla.org/releases/mozilla-beta/file/e549349b8d66/modules/libpref/init/all.js#l4237
@@ -456,3 +458,8 @@ user_pref("dom.select_events.enabled", false);
 // https://w3c.github.io/clipboard-apis/#clipboard-event-interfaces
 user_pref("dom.event.clipboardevents.enabled", false);
 
+
+/// https://wiki.mozilla.org/Firefox/Shield
+/// какая-то фигня, которая позволяет мозилле ставить расширения без спроса.
+user_pref("extensions.shield-recipe-client.enabled", false);
+user_pref("extensions.shield-recipe-client.api_url", "");
