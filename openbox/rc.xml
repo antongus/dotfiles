@@ -929,6 +929,12 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <y>-0</y>
       </position>
     </application>
+    <!-- Place VirtualBox wildow on secondary display and all desktops -->
+    <application name="VirtualBox" class="VirtualBox" type="normal">
+      <monitor>2</monitor>
+      <desktop>all</desktop>
+    </application>
+
     <!-- Eclipse -->
     <!--
     <application class="Eclipse" type="normal">
