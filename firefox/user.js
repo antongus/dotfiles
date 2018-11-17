@@ -463,3 +463,11 @@ user_pref("dom.event.clipboardevents.enabled", false);
 /// какая-то фигня, которая позволяет мозилле ставить расширения без спроса.
 user_pref("extensions.shield-recipe-client.enabled", false);
 user_pref("extensions.shield-recipe-client.api_url", "");
+
+
+/// отключаем создание отчётов о падении. Без этого они копятся в директории Crash Reports
+user_pref("browser.tabs.crashReporting.sendReport", false);
+
+/// отключаем дополнение Firefox Monitor, которое проверяет, не утёк ли мой пароль
+/// на каком-то сайте (haveibeenpwned.com)
+user_pref("extensions.fxmonitor.enabled", false);
