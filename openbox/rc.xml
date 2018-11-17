@@ -246,7 +246,8 @@
     <!-- Qt creator -->
     <keybind key="W-Q">
       <action name="Execute">
-        <command>/opt/Qt5.6.2/Tools/QtCreator/bin/qtcreator</command>
+        <!-- <command>/opt/Qt5.6.2/Tools/QtCreator/bin/qtcreator</command> -->
+        <command>/home/anton/Qt5.9.6/Tools/QtCreator/bin/qtcreator</command>
       </action>
     </keybind>
     <!-- Keychain to run serial terminals -->
