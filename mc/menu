@@ -10,8 +10,8 @@ shell_patterns=0
 	
 
 = t d
-1       Nautilus here
-	nautilus %d &
+1       git-cola here
+	git-cola &
 
 2       Convert DOS line endings to Unix one
 	dos2unix * &

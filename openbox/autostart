@@ -6,7 +6,7 @@
 #gnome-settings-daemon &
 
 # setup second monitor to be at right of first monitor
-xrandr --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off --output VGA1 --mode 1280x1024 --pos 1920x0 --rotate normal
+xrandr --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off --output VGA-1 --mode 1280x1024 --pos 1920x0 --rotate normal
 
 # set up keyboard layout and switch scheme
 #(sleep 5 && setxkbmap -option grp:switch,grp:caps_toggle,grp_led:scroll us,ru) &
@@ -16,7 +16,8 @@ xrandr --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --out
 numlockx &
 
 # set desktop background image
-feh --bg-fill --no-fehbg /home/anton/.wallpapers/bulutsu-green-1366x768.png &
+#feh --bg-fill --no-fehbg /home/anton/.wallpapers/bulutsu-green-1366x768.png &
+feh --bg-fill --no-fehbg /home/anton/.wallpapers/fish-1.jpg &
 
 # OSD (does not work for me)
 # osdsh &
@@ -45,3 +46,6 @@ lxpanel &
 (sleep 20 && run-mytetra) &
 
 #(sleep 20 && skype) &
+
+#disable screen blanking
+xset -dpms s off s noblank s 0 0 s noexpose &

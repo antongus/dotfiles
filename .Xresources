@@ -52,7 +52,8 @@ Xft.hintstyle:  hintslight
 #define S_green         #859900
 
 #ifndef SOLARIZED_LIGHT
-   #define S_base03        #002b36
+   #define S_base03        #2c2c2c
+!!   #define S_base03        #002b36
    #define S_base02        #073642
    #define S_base01        #586e75
    #define S_base00        #657b83

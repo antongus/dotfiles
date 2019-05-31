@@ -101,8 +101,10 @@
 
 #====== Combining Diacritical Marks: [ \ ↑ punctuation ], [ \ punctuation ], [ \ ↓ punctuation ],
 # ABOVE
+#<Multi_key> <backslash> <Up> <apostrophe>				: "̀"	U0301 # COMBINING ACUTE ACCENT
+<Multi_key> <backslash> <Up> <apostrophe>				: "̀"	U00B4 # COMBINING ACUTE ACCENT
 <Multi_key> <backslash> <Up> <grave>					: "̀"	U0340 # GRAVE TONE: ̀
-<Multi_key> <backslash> <Up> <apostrophe>				: "́"	U0341 # ACUTE TONE: ́
+#<Multi_key> <backslash> <Up> <apostrophe>				: "́"	U0341 # ACUTE TONE: ́
 <Multi_key> <backslash> <Up> <asciicircum>				: "̂"	U0302 # CIRCUMFLEX: ̂
 <Multi_key> <backslash> <Up> <o>						: "̊"	U030A # CIRCLE: ̊
 <Multi_key> <backslash> <Up> <asterisk>					: "⃰"	U20F0 # ASTERISK: ⃰

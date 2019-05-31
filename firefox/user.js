@@ -200,7 +200,12 @@ user_pref("datareporting.healthreport.documentServerURI", "");
 // https://wiki.mozilla.org/Telemetry/Testing#Browser_Prefs
 // https://gecko.readthedocs.org/en/latest/toolkit/components/telemetry/telemetry/preferences.html
 user_pref("toolkit.telemetry.enabled", false);
+user_pref("toolkit.telemetry.rejected", true);
+user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.infoURL", "");
 user_pref("toolkit.telemetry.server", "");
+user_pref("toolkit.telemetry.cachedClientID", "");
+
 user_pref("toolkit.telemetry.archive.enabled", false);
 // https://wiki.mozilla.org/Unified_Telemetry
 user_pref("toolkit.telemetry.unified", false);
@@ -471,3 +476,13 @@ user_pref("browser.tabs.crashReporting.sendReport", false);
 /// отключаем дополнение Firefox Monitor, которое проверяет, не утёк ли мой пароль
 /// на каком-то сайте (haveibeenpwned.com)
 user_pref("extensions.fxmonitor.enabled", false);
+
+/// отключаем обновление системных дополнений
+user_pref("extensions.systemAddon.update.enabled", false);
+user_pref("extensions.systemAddon.update.url", "");
+
+
+/// это я сам: отключил web-assembly, думаю, что это в какой-то мере обезопасит
+/// от новой уязвимости Spoiler
+user_pref("javascript.options.wasm", false);
+

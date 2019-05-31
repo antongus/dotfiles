@@ -212,16 +212,16 @@
         <command>x-terminal-emulator -e mc</command>
       </action>
     </keybind>
-    <!-- vnc connection to NAS -->
-    <keybind key="W-N">
+    <!-- Far for linux -->
+    <keybind key="W-F">
       <action name="Execute">
-        <command>remmina -c ~/.remmina/1337463875626.remmina</command>
+        <command>/home/anton/Misc/far2l/far2l</command>
       </action>
     </keybind>
     <!-- web browser -->
     <keybind key="W-W">
       <action name="Execute">
-<!--        <command>firejail firefox</command> -->
+        <!--        <command>firejail firefox</command> -->
         <command>firefox</command>
       </action>
     </keybind>
@@ -247,7 +247,8 @@
     <keybind key="W-Q">
       <action name="Execute">
         <!-- <command>/opt/Qt5.6.2/Tools/QtCreator/bin/qtcreator</command> -->
-        <command>/home/anton/Qt5.9.6/Tools/QtCreator/bin/qtcreator</command>
+        <!-- <command>/home/anton/Qt5.9.6/Tools/QtCreator/bin/qtcreator</command> -->
+        <command>/home/anton/Qt5.12/Tools/QtCreator/bin/qtcreator</command>
       </action>
     </keybind>
     <!-- Keychain to run serial terminals -->
@@ -910,17 +911,6 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <y>0</y>
       </position>
     </application>
-    <!-- Evince -->
-    <application name="evince" class="Evince" type="normal">
-      <position force="no">
-        <x>300</x>
-        <y>0</y>
-      </position>
-      <size>
-        <width>1620</width>
-        <height>1063</height>
-      </size>
-    </application>
     <!-- Pidgin conversation window -->
     <application name="Pidgin" class="Pidgin" role="conversation" type="normal">
       <desktop>all</desktop>
@@ -934,7 +924,6 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
       <monitor>2</monitor>
       <desktop>all</desktop>
     </application>
-
     <!-- Eclipse -->
     <!--
     <application class="Eclipse" type="normal">
@@ -950,11 +939,5 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
       </size>
     </application>
 -->
-    <application class="Skype" type="normal" role="">
-      <position force="yes">
-        <x>1</x>
-        <y>0</y>
-      </position>
-    </application>
   </applications>
 </openbox_config>

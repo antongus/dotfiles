@@ -635,6 +635,10 @@ regex/\.(lyx|LYX)$
 regex/\.([tT][oO][rR][rR][eE][nN][tT])$
 	View=%view{ascii} ctorrent -x %f 2>/dev/null
 
+# scad
+regex/\.([sS][cC][aA][dD])$
+	Open=(openscad %f >/dev/null 2>&1 &)
+
 ### Plain compressed files ###
 
 # ace
