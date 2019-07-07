@@ -415,7 +415,8 @@ include/image
 #	Open=(ristretto --fullscreen %f >/dev/null 2>&1 &)
 #	Open=(gwenview --fullscreen %f >/dev/null 2>&1 &)
 #	Open=(viewnior --fullscreen %f >/dev/null 2>&1 &)
-	Open=(feh -d --draw-tinted -F --start-at ./%p . >/dev/null 2>&1 &)
+#	Open=(feh -d --draw-tinted -F --start-at ./%p . >/dev/null 2>&1 &)
+	Open=(sviewgl -f %f >/dev/null 2>&1 &)
 
 	#View=%view{ascii} identify %f
 	#View=%view{ascii} asciiview %f
@@ -547,6 +548,8 @@ shell/.abw
 
 # Microsoft Word Document
 regex/\.([Dd][oO][cCtT]|[Ww][rR][iI])$
+	Open=(libreoffice %f >/dev/null 2>&1 &)
+regex/\.([Dd][oO][cC][Xx])$
 	Open=(libreoffice %f >/dev/null 2>&1 &)
 #	View=%view{ascii} antiword -t %f || catdoc -w %f || word2x -f text %f - || strings %f
 type/^Microsoft\ Word
