@@ -48,4 +48,4 @@ lxpanel &
 #(sleep 20 && skype) &
 
 #disable screen blanking
-xset -dpms s off s noblank s 0 0 s noexpose &
+(sleep 200 && xset -dpms s off s noblank s 0 0 s noexpose) &
