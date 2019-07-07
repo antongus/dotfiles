@@ -1,0 +1,43 @@
+# here is my autostart
+
+# start keyring daemon (does not work properly)
+#/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg &
+
+#gnome-settings-daemon &
+
+# setup second monitor to be at right of first monitor
+#xrandr --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off --output VGA-1 --mode 1280x1024 --pos 1920x0 --rotate normal
+
+# set up keyboard layout and switch scheme
+(sleep 5 && setxkbmap -option grp:switch,grp:caps_toggle,grp_led:scroll,compose:ralt us,ru) &
+
+# set desktop background image
+#feh --bg-fill --no-fehbg /home/anton/.wallpapers/fish-1.jpg &
+
+# panel
+lxpanel &
+
+# sound regulator on panel
+#gnome-sound-applet &
+
+#conky
+(sleep 5 && conky) &
+
+#tint2 &
+
+# for automount:
+(sleep 4 && pcmanfm -d) &
+
+# start pidgin if USB disk with profile is mounted
+(sleep 16 && run-pidgin) &
+
+# start thunderbird if USB disk with profile is mounted
+(sleep 15 && run-thunderbird) &
+
+#start mytetra
+(sleep 20 && run-mytetra) &
+
+#(sleep 20 && skype) &
+
+#disable screen blanking
+xset -dpms s off s noblank s 0 0 s noexpose &
