@@ -88,8 +88,6 @@
 <Multi_key> <minus> <minus> <period>					: "–"	U2013 # EN DASH: for numbers: 1–2
 <Multi_key> <minus> <minus> <minus> 					: "—"	U2014 # EM DASH: for text: "What?" — he said.
 
-<Multi_key> <tab> <tab>									: "	"	U0009 # HORIZONTAL TABULATION
-
 #====== Smileys & Co
 <Multi_key> <less> <3>									: "♥"	U2665 # BLACK HEART SUIT
 <Multi_key> <O> <numbersign>							: "✆"	U2706 # TELEPHONE LOCATION SIGN

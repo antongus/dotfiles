@@ -118,12 +118,13 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>3</number>
+    <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>WEB</name>
       <name>DEV</name>
       <name>MISC</name>
+      <name>MAIL</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -197,13 +198,7 @@
     <keybind key="W-R">
       <action name="Execute">
         <!--        <command>gmrun</command>  -->
-        <command>dmenu_run</command>
-      </action>
-    </keybind>
-    <!-- Lock screen -->
-    <keybind key="W-L">
-      <action name="Execute">
-        <command>slock</command>
+        <command>rofi -show run</command>
       </action>
     </keybind>
     <!-- Midnight Commander -->
@@ -247,8 +242,8 @@
     <keybind key="W-Q">
       <action name="Execute">
         <!-- <command>/opt/Qt5.6.2/Tools/QtCreator/bin/qtcreator</command> -->
-        <!-- <command>/home/anton/Qt5.9.6/Tools/QtCreator/bin/qtcreator</command> -->
-        <command>/home/anton/Qt5.12/Tools/QtCreator/bin/qtcreator</command>
+        <!-- <command>/home/anton/Qt5.12/Tools/QtCreator/bin/qtcreator</command> -->
+        <command>/home/anton/Qt5.14.2/Tools/QtCreator/bin/qtcreator</command>
       </action>
     </keybind>
     <!-- Keychain to run serial terminals -->
@@ -904,6 +899,10 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <y>0</y>
       </position>
     </application>
+    <application class="Thunderbird" type="normal">
+      <desktop>4</desktop>
+      <maximized>true</maximized>
+    </application>
     <!-- qt creator -->
     <application name="qtcreator" class="QtCreator" title="Qt Creator" type="normal">
       <position force="no">
@@ -920,7 +919,7 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
       </position>
     </application>
     <!-- Place VirtualBox wildow on secondary display and all desktops -->
-    <application name="VirtualBox" class="VirtualBox" type="normal">
+    <application name="VirtualBoxVM" class="VirtualBoxVM" type="normal">
       <monitor>2</monitor>
       <desktop>all</desktop>
     </application>

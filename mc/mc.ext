@@ -415,8 +415,8 @@ include/image
 #	Open=(ristretto --fullscreen %f >/dev/null 2>&1 &)
 #	Open=(gwenview --fullscreen %f >/dev/null 2>&1 &)
 #	Open=(viewnior --fullscreen %f >/dev/null 2>&1 &)
-#	Open=(feh -d --draw-tinted -F --start-at ./%p . >/dev/null 2>&1 &)
-	Open=(sviewgl -f %f >/dev/null 2>&1 &)
+	Open=(feh -d --draw-tinted -F --start-at ./%p . >/dev/null 2>&1 &)
+#	Open=(sviewgl -f %f >/dev/null 2>&1 &)
 
 	#View=%view{ascii} identify %f
 	#View=%view{ascii} asciiview %f
@@ -460,6 +460,9 @@ regex/\.([mM]3[uU]|[pP][lL][sS])$
 
 
 ### Video ###
+
+regex/\.([wW][eE][bB][mM])$
+	Include=video
 
 regex/\.([aA][vV][iI])$
 	Include=video
@@ -516,6 +519,7 @@ type/^PostScript
 type/^PDF
 #	Open=(evince %f >/dev/null 2>&1 &)
 	Open=(nohup evince %f >/dev/null 2>&1 &)
+#	Open=(nohup mupdf %f >/dev/null 2>&1 &)
 	#Open=(acroread %f &)
 	#Open=(ghostview %f &)
 	View=%view{ascii} pdftotext %f -

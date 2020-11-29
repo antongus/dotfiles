@@ -8,6 +8,10 @@
 # setup second monitor to be at right of first monitor
 xrandr --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off --output VGA-1 --mode 1280x1024 --pos 1920x0 --rotate normal
 
+# отключить энергосбережение звуковой карты. А то щёлкает, когда просыпается
+echo "0" | sudo tee /sys/module/snd_hda_intel/parameters/power_save
+#echo "0" > /sys/module/snd_hda_intel/parameters/power_save
+
 # set up keyboard layout and switch scheme
 #(sleep 5 && setxkbmap -option grp:switch,grp:caps_toggle,grp_led:scroll us,ru) &
 (sleep 5 && setxkbmap -option grp:switch,grp:caps_toggle,grp_led:scroll,compose:ralt us,ru) &
@@ -34,7 +38,13 @@ lxpanel &
 #tint2 &
 
 # for automount:
-(sleep 4 && pcmanfm -d) &
+#(sleep 4 && pcmanfm -d) &
+
+#start mytetra
+(sleep 6 && run-mytetra) &
+
+# start telegram-desktop
+(sleep 10 && /home/anton/Misc/Telegram/Telegram -startintray) &
 
 # start pidgin if USB disk with profile is mounted
 (sleep 16 && run-pidgin) &
@@ -42,10 +52,7 @@ lxpanel &
 # start thunderbird if USB disk with profile is mounted
 (sleep 15 && run-thunderbird) &
 
-#start mytetra
-(sleep 20 && run-mytetra) &
-
 #(sleep 20 && skype) &
 
 #disable screen blanking
-(sleep 200 && xset -dpms s off s noblank s 0 0 s noexpose) &
+#(sleep 200 && xset -dpms s off s noblank s 0 0 s noexpose) &

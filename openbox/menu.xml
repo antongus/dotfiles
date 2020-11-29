@@ -29,6 +29,9 @@
   <item label="Qt Creator (5.12)" icon="/home/anton/Qt5.12/Docs/Qt-5.12.2/qtdoc/images/icon_QtCreator_78x78px.png">
     <action name="Execute"><execute>/home/anton/Qt5.12/Tools/QtCreator/bin/qtcreator</execute></action>
   </item>
+  <item label="Qt Creator (5.14.2)" icon="/home/anton/Qt5.14.2/Docs/Qt-5.14.2/qtdoc/images/icon_QtCreator_78x78px.png">
+    <action name="Execute"><execute>/home/anton/Qt5.14.2/Tools/QtCreator/bin/qtcreator</execute></action>
+  </item>
   <item label="DeadBeef" icon="/opt/deadbeef-0.6.1/deadbeef.png">
     <action name="Execute"><execute>/opt/deadbeef-0.6.1/deadbeef</execute></action>
   </item>
@@ -38,9 +41,14 @@
       <action name="Execute"><execute>/home/anton/Misc/Cura/Cura-3.2.1.AppImage</execute></action>
     </item>
 -->
+    <item label="Cura 4.3.0">
+      <action name="Execute"><execute>/home/anton/Misc/Cura/Ultimaker_Cura-4.3.0.AppImage</execute></action>
+    </item>
+<!--
     <item label="Cura 3.6.0">
       <action name="Execute"><execute>/home/anton/Misc/Cura/Ultimaker_Cura-3.6.0.AppImage</execute></action>
     </item>
+-->
     <item label="OpenSCAD" icon="/usr/share/pixmaps/openscad.png">
       <action name="Execute"><execute>openscad</execute></action>
     </item>
@@ -68,6 +76,10 @@
     <item label="Windows 10">
       <action name="Execute"><execute>vboxmanage startvm "MSEdge - Win10_preview"</execute></action>
     </item>
+    <item label="lubuntu-20-04">
+      <action name="Execute"><execute>vboxmanage startvm "lubuntu-20-04"</execute></action>
+    </item>
+
   </menu>
 
   <menu id="misc-menu" label="Misc">
@@ -97,6 +109,9 @@
 
 <!-- Programs that runs at start, just for case if I need restart them  -->
   <menu id="autoruns-menu" label="Autorun">
+    <item label="Thunderbird, pidgin and mytetra">
+      <action name="Execute"><execute>run-autoruns</execute></action>
+    </item>
     <item label="Thunderbird mail" icon="/usr/share/pixmaps/thunderbird.png">
       <action name="Execute"><execute>run-thunderbird</execute></action>
     </item>
@@ -105,6 +120,9 @@
     </item>
     <item label="MyTetra">
       <action name="Execute"><execute>run-mytetra</execute></action>
+    </item>
+    <item label="Telegram">
+      <action name="Execute"><execute>/home/anton/Misc/Telegram/Telegram</execute></action>
     </item>
   </menu>
 
@@ -115,6 +133,12 @@
     </item>
     <item label="/dev/ttyUSB0" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
       <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB0</execute></action>
+    </item>
+    <item label="/dev/ttyUSB0-38400" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
+      <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB0-38400</execute></action>
+    </item>
+    <item label="/dev/ttyUSB0-9600" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
+      <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB0-9600</execute></action>
     </item>
     <item label="/dev/ttyUSB0-38400" icon="/usr/share/icons/gnome/22x22/apps/utilities-terminal.png">
       <action name="Execute"><execute>/usr/bin/putty -load usb-ttyUSB0-38400</execute></action>
