@@ -216,8 +216,7 @@
     <!-- web browser -->
     <keybind key="W-W">
       <action name="Execute">
-        <!--        <command>firejail firefox</command> -->
-        <command>firefox</command>
+        <command>run-firefox</command>
       </action>
     </keybind>
     <!-- Calculator -->
@@ -243,46 +242,59 @@
       <action name="Execute">
         <!-- <command>/opt/Qt5.6.2/Tools/QtCreator/bin/qtcreator</command> -->
         <!-- <command>/home/anton/Qt5.12/Tools/QtCreator/bin/qtcreator</command> -->
-        <command>/home/anton/Qt5.14.2/Tools/QtCreator/bin/qtcreator</command>
+        <!-- <command>/home/anton/Qt5.14.2/Tools/QtCreator/bin/qtcreator</command> -->
+        <command>run-qtcreator</command>
+      </action>
+    </keybind>
+    <!-- DeadBeef -->
+    <keybind key="W-B">
+      <action name="Execute">
+        <command>/opt/deadbeef-0.6.1/deadbeef</command>
+      </action>
+    </keybind>
+    <!-- Telegram desktop -->
+    <keybind key="W-Z">
+      <action name="Execute">
+        <command>/home/anton/Misc/Telegram/Telegram</command>
       </action>
     </keybind>
     <!-- Keychain to run serial terminals -->
     <keybind key="W-s">
       <!-- Terminals at 115200 baud -->
-      <keybind key="W-0">
+      <keybind key="A">
+        <action name="Execute">
+          <command>/usr/bin/putty -load usb-ttyACM0</command>
+        </action>
+      </keybind>
+      <keybind key="0">
         <action name="Execute">
           <command>/usr/bin/putty -load usb-ttyUSB0</command>
         </action>
       </keybind>
-      <keybind key="W-1">
+      <keybind key="1">
         <action name="Execute">
           <command>/usr/bin/putty -load usb-ttyUSB1</command>
         </action>
       </keybind>
-      <keybind key="W-2">
+      <keybind key="2">
         <action name="Execute">
           <command>/usr/bin/putty -load usb-ttyUSB2</command>
         </action>
       </keybind>
-      <keybind key="W-3">
+      <keybind key="3">
         <action name="Execute">
           <command>/usr/bin/putty -load usb-ttyUSB3</command>
         </action>
       </keybind>
       <!-- Terminals at 38400 baud -->
-      <keybind key="0">
+      <keybind key="W-0">
         <action name="Execute">
           <command>/usr/bin/putty -load usb-ttyUSB0-38400</command>
         </action>
       </keybind>
-      <keybind key="1">
+      <keybind key="W-1">
         <action name="Execute">
           <command>/usr/bin/putty -load usb-ttyUSB1-38400</command>
-        </action>
-      </keybind>
-      <keybind key="2">
-        <action name="Execute">
-          <command>/usr/bin/putty -load usb-ttyUSB2-38400</command>
         </action>
       </keybind>
     </keybind>
@@ -359,18 +371,21 @@
     <keybind key="W-Up">
       <action name="MaximizeFull"/>
     </keybind>
-    <!-- Volume control -->
-    <!-- set vol to 156%: pacmd set-sink-volume 0 102400 -->
-    <keybind key="C-A-Up">
-      <action name="execute">
-        <execute>pactl set-sink-volume 0 +5%</execute>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>amixer -c 0 set Master 2- unmute</command>
       </action>
     </keybind>
-    <keybind key="C-A-Down">
-      <action name="execute">
-        <execute>/home/anton/.config/openbox/vol_down.sh</execute>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>amixer -c 0 set Master 2+ unmute</command>
       </action>
     </keybind>
+    <!--    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>amixer set Master toggle</command>
+      </action> 
+    </keybind>  -->
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
       <action name="Close"/>
@@ -383,12 +398,6 @@
     <keybind key="A-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
-      </action>
-    </keybind>
-    <!-- Take a screenshot of the current window with gnome-screenshot when Alt+Print are pressed -->
-    <keybind key="A-Print">
-      <action name="Execute">
-        <command>scrot --border --focused</command>
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
@@ -410,15 +419,10 @@
         </finalactions>
       </action>
     </keybind>
-    <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Up">
-      <action name="DirectionalCycleWindows">
-        <direction>up</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Down">
-      <action name="DirectionalCycleWindows">
-        <direction>down</direction>
+    <!-- Take a screenshot of the current window with gnome-screenshot when Alt+Print are pressed -->
+    <keybind key="A-Print">
+      <action name="Execute">
+        <command>scrot --border --focused</command>
       </action>
     </keybind>
     <!-- Make screenshot when Print is pressed -->
@@ -894,9 +898,10 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
       <shade>no</shade>
     </application>
     <application class="Firefox" type="normal">
+      <desktop>1</desktop>
       <position force="no">
         <x>300</x>
-        <y>0</y>
+        <y>1</y>
       </position>
     </application>
     <application class="Thunderbird" type="normal">
@@ -905,10 +910,15 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
     </application>
     <!-- qt creator -->
     <application name="qtcreator" class="QtCreator" title="Qt Creator" type="normal">
+      <desktop>2</desktop>
       <position force="no">
         <x>300</x>
-        <y>0</y>
+        <y>1</y>
       </position>
+      <size>
+        <width>1622</width>
+        <height>1026</height>
+      </size>
     </application>
     <!-- Pidgin conversation window -->
     <application name="Pidgin" class="Pidgin" role="conversation" type="normal">
@@ -918,10 +928,50 @@ _OB_APP_ROLE(UTF8_STRING) = "browser"
         <y>-0</y>
       </position>
     </application>
+    <!-- evince (тупая софтина создаёт окна рандомного размера и в рандомных позициях) -->
+    <application class="Evince" type="normal">
+      <monitor>1</monitor>
+      <position force="yes">
+        <x>200</x>
+        <y>1</y>
+      </position>
+      <size>
+        <width>1618</width>
+        <height>1025</height>
+      </size>
+    </application>
+    <!-- Atril - форк evince. Получше, но с позициями окон тоже всё так себе -->
+    <application class="Atril" type="normal">
+      <monitor>1</monitor>
+      <position force="yes">
+        <x>200</x>
+        <y>1</y>
+      </position>
+      <size>
+        <width>1200</width>
+        <height>1062</height>
+      </size>
+    </application>
+    <!-- MyTetra -->
+    <application class="mytetra" type="normal">
+      <monitor>1</monitor>
+      <position force="yes">
+        <x>200</x>
+        <y>1</y>
+      </position>
+      <size>
+        <width>1200</width>
+        <height>1027</height>
+      </size>
+    </application>
     <!-- Place VirtualBox wildow on secondary display and all desktops -->
     <application name="VirtualBoxVM" class="VirtualBoxVM" type="normal">
       <monitor>2</monitor>
       <desktop>all</desktop>
+    </application>
+    <!-- У телеграма иногда просмотрщик убегает на второй монитор -->
+    <application name="Telegram" class="TelegramDesktop" title="Media viewer"> 
+      <monitor>1</monitor>
     </application>
     <!-- Eclipse -->
     <!--

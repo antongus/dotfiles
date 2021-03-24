@@ -485,3 +485,12 @@ user_pref("javascript.options.wasm", false);
 
 /// какая-то дыра от какого-то ненужного заголовка. Закрываем нафиг.
 user_pref("network.http.altsvc.enabled", false);
+
+/* 0105c: disable Activity Stream Top Stories, Pocket-based and/or sponsored content ***/
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
+user_pref("browser.newtabpage.activity-stream.showSponsored", false);
+user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false); // [FF66+]
+
+/// автообновления
+user_pref("app.update.auto", false);

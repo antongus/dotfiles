@@ -511,14 +511,15 @@ include/video
 
 # Postscript
 type/^PostScript
-	Open=(evince %f >/dev/null 2>&1 &)
+#	Open=(evince %f >/dev/null 2>&1 &)
+	Open=(atril %f >/dev/null 2>&1 &)
 #	Open=(gv %f &)
 	View=%view{ascii} ps2ascii %f
 
 # PDF
 type/^PDF
 #	Open=(evince %f >/dev/null 2>&1 &)
-	Open=(nohup evince %f >/dev/null 2>&1 &)
+	Open=(nohup atril %f >/dev/null 2>&1 &)
 #	Open=(nohup mupdf %f >/dev/null 2>&1 &)
 	#Open=(acroread %f &)
 	#Open=(ghostview %f &)
@@ -594,7 +595,7 @@ regex/\.([Tt][Ee][Xx])$
 
 # DjVu
 regex/\.(djvu|DJVU)$
-	Open=(evince %f >/dev/null 2>&1 &)
+	Open=(nohup atril %f >/dev/null 2>&1 &)
 
 ### Miscellaneous ###
 

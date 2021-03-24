@@ -2,188 +2,162 @@
 # Use preference dialog in lxpanel to adjust config when you can.
 
 Global {
-    edge=bottom
-    allign=left
-    margin=0
-    widthtype=pixel
-    width=1920
-    height=26
-    transparent=0
-    tintcolor=#000000
-    alpha=64
-    autohide=0
-    heightwhenhidden=2
-    setdocktype=1
-    setpartialstrut=1
-    usefontcolor=1
-    fontsize=10
-    fontcolor=#ffffff
-    usefontsize=0
-    background=1
-    backgroundfile=/usr/share/lxpanel/images/background.png
-    iconsize=24
-    loglevel=2
+  edge=bottom
+  allign=left
+  margin=0
+  widthtype=pixel
+  width=3200
+  height=26
+  transparent=1
+  tintcolor=#000000
+  alpha=207
+  autohide=0
+  heightwhenhidden=2
+  setdocktype=1
+  setpartialstrut=1
+  usefontcolor=1
+  fontsize=10
+  fontcolor=#ffffff
+  usefontsize=0
+  background=0
+  backgroundfile=/usr/share/lxpanel/images/background.png
+  iconsize=24
+  loglevel=2
 }
-
 Plugin {
-    type = menu
-    Config {
-        image=/usr/share/lxpanel/images/my-computer.png
-        system {
-        }
-        separator {
-        }
-        item {
-            command=run
-        }
-        separator {
-        }
-        item {
-            image=gnome-logout
-            command=logout
-        }
+  type=menu
+  Config {
+    image=/home/anton/.icons/emoji_u1f3af.svg
+    system {
     }
-}
-
-Plugin {
-    type = space
-    Config {
-        Size=8
+    separator {
     }
-}
-
-Plugin {
-    type = wincmd
-    Config {
-        image=window-manager
-        Button1=iconify
-        Button2=shade
-        Toggle=0
+    item {
+      command=run
     }
-}
-
-Plugin {
-    type = space
-    Config {
-        Size=4
+    separator {
     }
-}
-
-Plugin {
-    type = launchbar
-    Config {
-        Button {
-            id=pcmanfm.desktop
-        }
-        Button {
-            id=/usr/share/applications/gcalctool.desktop
-        }
-        Button {
-            id=/home/anton/Misc/shortcuts/Eclipse.desktop
-        }
-        Button {
-            id=/usr/share/applications/firefox.desktop
-        }
-        Button {
-            id=/usr/share/applications/gnome-terminal.desktop
-        }
-        Button {
-            id=/usr/share/applications/mc.desktop
-            terminal=1
-        }
+    item {
+      image=gnome-logout
+      command=logout
     }
+  }
 }
-
 Plugin {
-    type = space
-    Config {
-        Size=4
+  type=space
+  Config {
+    Size=8
+  }
+}
+Plugin {
+  type=wincmd
+  Config {
+    image=window-manager
+    Button1=iconify
+    Button2=shade
+    Toggle=0
+  }
+}
+Plugin {
+  type=space
+  Config {
+    Size=4
+  }
+}
+Plugin {
+  type=launchbar
+  Config {
+    Button {
+      id=pcmanfm.desktop
     }
-}
-
-Plugin {
-    type = pager
-}
-
-Plugin {
-    type = space
-    Config {
-        Size=4
+    Button {
+      id=/usr/share/applications/speedcrunch.desktop
     }
-}
-
-Plugin {
-    type = taskbar
-    expand=1
-    Config {
-        tooltips=1
-        IconsOnly=0
-        ShowAllDesks=0
-        UseMouseWheel=1
-        UseUrgencyHint=1
-        FlatButton=0
-        MaxTaskWidth=150
-        spacing=1
-        GroupedTasks=0
+    Button {
+      id=mc.desktop
     }
-}
-
-Plugin {
-    type = cpu
-}
-
-Plugin {
-    type = space
-    Config {
-        Size=2
+    Button {
+      id=menu://applications/Internet/firefox.desktop
     }
+  }
 }
-
 Plugin {
-    type = tray
+  type=space
+  Config {
+    Size=4
+  }
 }
-
 Plugin {
-    type = space
-    Config {
-        Size=2
-    }
+  type=wnckpager
+  Config {
+  }
 }
-
 Plugin {
-    type = volumealsa
+  type=space
+  Config {
+    Size=4
+  }
 }
-
 Plugin {
-    type = xkb
-    Config {
-        DisplayType=0
-        PerWinLayout=0
-        NoResetOpt=0
-        KeepSysLayouts=1
-        Model=pc105
-        LayoutsList=us
-        VariantsList=,
-        ToggleOpt=shift_caps_toggle
-        FlagSize=3
-    }
+  type=taskbar
+  expand=1
+  Config {
+    tooltips=1
+    IconsOnly=0
+    ShowAllDesks=0
+    UseMouseWheel=1
+    UseUrgencyHint=1
+    FlatButton=0
+    MaxTaskWidth=150
+    spacing=1
+    GroupedTasks=0
+    DisableUpscale=0
+    UseSmallerIcons=-1
+  }
 }
-
 Plugin {
-    type = space
-    Config {
-        Size=2
-    }
+  type=cpu
+  Config {
+  }
 }
-
 Plugin {
-    type = dclock
-    Config {
-        ClockFmt=%a  %d %b %Y   %H:%M
-        TooltipFmt=%A %x
-        BoldFont=0
-        IconOnly=0
-        CenterText=0
-    }
+  type=space
+  Config {
+    Size=2
+  }
 }
-
+Plugin {
+  type=tray
+  Config {
+  }
+}
+Plugin {
+  type=xkb
+  Config {
+    DisplayType=0
+    PerWinLayout=0
+    NoResetOpt=0
+    KeepSysLayouts=1
+    Model=pc105
+    LayoutsList=us
+    VariantsList=,
+    ToggleOpt=shift_caps_toggle
+    FlagSize=3
+  }
+}
+Plugin {
+  type=space
+  Config {
+    Size=2
+  }
+}
+Plugin {
+  type=dclock
+  Config {
+    ClockFmt=%a  %d %b %Y   %H:%M
+    TooltipFmt=%A %x
+    BoldFont=0
+    IconOnly=0
+    CenterText=0
+  }
+}
