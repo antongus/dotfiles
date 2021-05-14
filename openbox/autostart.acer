@@ -12,7 +12,7 @@
 (sleep 5 && setxkbmap -option grp:switch,grp:caps_toggle,grp_led:scroll,compose:ralt us,ru) &
 
 # set desktop background image
-#feh --bg-fill --no-fehbg /home/anton/.wallpapers/fish-1.jpg &
+feh --bg-fill --no-fehbg /home/anton/.wallpapers/fish-1.jpg &
 
 # panel
 lxpanel &
@@ -26,16 +26,19 @@ lxpanel &
 #tint2 &
 
 # for automount:
-(sleep 4 && pcmanfm -d) &
+#(sleep 4 && pcmanfm -d) &
+
+#start mytetra
+(sleep 6 && run-mytetra) &
+
+# start telegram-desktop
+(sleep 10 && /home/anton/Misc/Telegram/Telegram -startintray) &
 
 # start pidgin if USB disk with profile is mounted
-(sleep 16 && run-pidgin) &
+#(sleep 16 && run-pidgin) &
 
 # start thunderbird if USB disk with profile is mounted
 (sleep 15 && run-thunderbird) &
-
-#start mytetra
-(sleep 20 && run-mytetra) &
 
 #(sleep 20 && skype) &
 
