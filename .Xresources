@@ -52,7 +52,7 @@ Xft.hintstyle:  hintslight
 #define S_green         #859900
 
 #ifndef SOLARIZED_LIGHT
-   #define S_base03        #2c2c2c
+   #define S_base03        #1c1c1c
 !!   #define S_base03        #002b36
    #define S_base02        #073642
    #define S_base01        #586e75
@@ -133,3 +133,48 @@ XTerm*saveLines: 4096
   Shift <Btn1Up>: select-end(CLIPBOARD, CUT_BUFFER1) \n\
   ~Shift ~Ctrl ~Meta <Btn2Up>:insert-selection(PRIMARY, CUT_BUFFER0) \n\
   Shift ~Ctrl ~Meta <Btn2Up>:insert-selection(CLIPBOARD, CUT_BUFFER1)
+
+
+
+URxvt*geometry: 128x40
+URxvt*font: xft:Liberation Mono:size=12
+
+URxvt*background:            S_base03
+URxvt*foreground:            S_base00
+URxvt*fading:                40
+URxvt*fadeColor:             S_base03
+URxvt*cursorColor:           S_base1
+URxvt*pointerColorBackground:S_base01
+URxvt*pointerColorForeground:S_base1
+
+!! black dark/light
+URxvt*color0:                S_base02
+URxvt*color8:                S_base03
+
+!! red dark/light
+URxvt*color1:                S_red
+URxvt*color9:                S_orange
+
+!! green dark/light
+URxvt*color2:                S_green
+URxvt*color10:               S_base01
+
+!! yellow dark/light
+URxvt*color3:                S_yellow
+URxvt*color11:               S_base00
+
+!! blue dark/light
+URxvt*color4:                S_blue
+URxvt*color12:               S_base0
+
+!! magenta dark/light
+URxvt*color5:                S_magenta
+URxvt*color13:               S_violet
+
+!! cyan dark/light
+URxvt*color6:                S_cyan
+URxvt*color14:               S_base1
+
+!! white dark/light
+URxvt*color7:                S_base2
+URxvt*color15:               S_base3

@@ -92,8 +92,10 @@ user_pref("network.security.ports.banned", "4444,9050,9051");
 user_pref("browser.safebrowsing.enabled", false);
 // https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_anti-malware-list-updating
 user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false);
 user_pref("browser.safebrowsing.downloads.enabled", false);
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+user_pref("browser.safebrowsing.downloads.remote.url", "");
 // https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_anti-malware-list-updating
 user_pref("browser.safebrowsing.appRepURL", "");
 user_pref("browser.safebrowsing.gethashURL", "");
@@ -199,22 +201,16 @@ user_pref("datareporting.healthreport.documentServerURI", "");
 // https://wiki.mozilla.org/Security/Reviews/Firefox6/ReviewNotes/telemetry
 // https://wiki.mozilla.org/Telemetry/Testing#Browser_Prefs
 // https://gecko.readthedocs.org/en/latest/toolkit/components/telemetry/telemetry/preferences.html
-user_pref("toolkit.telemetry.enabled", false);
-user_pref("toolkit.telemetry.rejected", true);
 user_pref("toolkit.telemetry.unified", false);
-user_pref("toolkit.telemetry.infoURL", "");
-user_pref("toolkit.telemetry.server", "");
-user_pref("toolkit.telemetry.cachedClientID", "");
-
+user_pref("toolkit.telemetry.enabled", false); // see [NOTE] above FF58+
+user_pref("toolkit.telemetry.server", "data:,");
 user_pref("toolkit.telemetry.archive.enabled", false);
-// https://wiki.mozilla.org/Unified_Telemetry
-user_pref("toolkit.telemetry.unified", false);
-// Это должно быть true.
-// https://hg.mozilla.org/releases/mozilla-beta/file/0f8e1375f717/toolkit/components/telemetry/TelemetryController.jsm#l669
-user_pref("toolkit.telemetry.unifiedIsOptIn", true);
-// https://hg.mozilla.org/releases/mozilla-beta/file/0f8e1375f717/browser/app/profile/firefox.js#l1904
-// https://hg.mozilla.org/releases/mozilla-beta/file/0f8e1375f717/toolkit/components/telemetry/TelemetryController.jsm#l628
-user_pref("toolkit.telemetry.optoutSample", false);
+user_pref("toolkit.telemetry.newProfilePing.enabled", false); // [FF55+]
+user_pref("toolkit.telemetry.shutdownPingSender.enabled", false); // [FF55+]
+user_pref("toolkit.telemetry.updatePing.enabled", false); // [FF56+]
+user_pref("toolkit.telemetry.bhrPing.enabled", false); // [FF57+] Background Hang Reporter
+user_pref("toolkit.telemetry.firstShutdownPing.enabled", false); // [FF57+]
+
 // Отключает отправку информации о падениях браузера в Mozilla (about:crashes).
 user_pref("breakpad.reportURL", "");
 user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
@@ -486,3 +482,15 @@ user_pref("extensions.systemAddon.update.url", "");
 /// от новой уязвимости Spoiler
 user_pref("javascript.options.wasm", false);
 
+
+/// какая-то дыра от какого-то ненужного заголовка. Закрываем нафиг.
+user_pref("network.http.altsvc.enabled", false);
+
+/* 0105c: disable Activity Stream Top Stories, Pocket-based and/or sponsored content ***/
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
+user_pref("browser.newtabpage.activity-stream.showSponsored", false);
+user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false); // [FF66+]
+
+/// автообновления
+user_pref("app.update.auto", false);

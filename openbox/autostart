@@ -8,6 +8,13 @@
 # setup second monitor to be at right of first monitor
 xrandr --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off --output VGA-1 --mode 1280x1024 --pos 1920x0 --rotate normal
 
+# отключить энергосбережение звуковой карты. А то щёлкает, когда просыпается
+echo "0" | sudo tee /sys/module/snd_hda_intel/parameters/power_save
+
+# panel
+lxpanel &
+#xfce4-panel &
+
 # set up keyboard layout and switch scheme
 #(sleep 5 && setxkbmap -option grp:switch,grp:caps_toggle,grp_led:scroll us,ru) &
 (sleep 5 && setxkbmap -option grp:switch,grp:caps_toggle,grp_led:scroll,compose:ralt us,ru) &
@@ -19,14 +26,13 @@ numlockx &
 #feh --bg-fill --no-fehbg /home/anton/.wallpapers/bulutsu-green-1366x768.png &
 feh --bg-fill --no-fehbg /home/anton/.wallpapers/fish-1.jpg &
 
-# OSD (does not work for me)
-# osdsh &
+# отключаем ускорение мыши (0), включаем равномерное движение
+# xinput list, xinput --list-props "2.4G Mouse", 
+# 312 = Accel Profile Enabled
+xinput set-prop "2.4G Mouse" 312 1 0
+# 309 = Accel Speed
+xinput set-prop "2.4G Mouse" 309 0.5
 
-# panel
-lxpanel &
-
-# sound regulator on panel
-#gnome-sound-applet &
 
 #conky
 (sleep 5 && conky) &
@@ -34,18 +40,21 @@ lxpanel &
 #tint2 &
 
 # for automount:
-(sleep 4 && pcmanfm -d) &
+#(sleep 4 && pcmanfm -d) &
+
+#start mytetra
+(sleep 6 && run-mytetra) &
+
+# start telegram-desktop
+(sleep 10 && /home/anton/Misc/Telegram/Telegram -startintray) &
 
 # start pidgin if USB disk with profile is mounted
-(sleep 16 && run-pidgin) &
+#(sleep 16 && run-pidgin) &
 
 # start thunderbird if USB disk with profile is mounted
 (sleep 15 && run-thunderbird) &
 
-#start mytetra
-(sleep 20 && run-mytetra) &
-
 #(sleep 20 && skype) &
 
 #disable screen blanking
-(sleep 200 && xset -dpms s off s noblank s 0 0 s noexpose) &
+#(sleep 200 && xset -dpms s off s noblank s 0 0 s noexpose) &

@@ -146,13 +146,15 @@ ${offset 20}${color #BBBBBB}${time %A, } ${color}${time %e %b %G} ${time %H:%M:%
 
 SYSTEM $hr
 ${color #BBBBBB}Uptime:${color} $uptime
-${color #BBBBBB}Frequency (in MHz):${color} $freq
+${color #BBBBBB}Frequency :${color} $freq_g GHz
 ${color #BBBBBB}RAM Usage:${color} $mem/$memmax - $memperc% ${membar 4}
 ${color #BBBBBB}Swap Usage:${color} $swap/$swapmax - $swapperc% ${swapbar 4}
-${color #BBBBBB}CPU1 (${color}${execi 8 sensors | grep Core\ 0: | sed 's/.*:[ ]*\([^ ]*\).*/\1/'}):${color} ${cpu cpu1}% ${cpubar cpu1 4}
-${color #BBBBBB}CPU2 (${color}${execi 8 sensors | grep Core\ 1: | sed 's/.*:[ ]*\([^ ]*\).*/\1/'}):${color} ${cpu cpu2}% ${cpubar cpu2 4}
-${color #BBBBBB}CPU3 (${color}${execi 8 sensors | grep Core\ 2: | sed 's/.*:[ ]*\([^ ]*\).*/\1/'}):${color} ${cpu cpu3}% ${cpubar cpu3 4}
-${color #BBBBBB}CPU4 (${color}${execi 8 sensors | grep Core\ 3: | sed 's/.*:[ ]*\([^ ]*\).*/\1/'}):${color} ${cpu cpu4}% ${cpubar cpu4 4}
+${color #BBBBBB}CPU1 ${color} ${cpu cpu1}% ${cpubar cpu1 4}
+${color #BBBBBB}CPU2 ${color} ${cpu cpu2}% ${cpubar cpu2 4}
+${color #BBBBBB}CPU3 ${color} ${cpu cpu3}% ${cpubar cpu3 4}
+${color #BBBBBB}CPU4 ${color} ${cpu cpu4}% ${cpubar cpu4 4}
+${color #BBBBBB}CPU5 ${color} ${cpu cpu5}% ${cpubar cpu5 4}
+${color #BBBBBB}CPU6 ${color} ${cpu cpu6}% ${cpubar cpu6 4}
 ${cpugraph 20 green}
 ${color #BBBBBB}Processes:${color} $processes  ${color #BBBBBB}Running:${color} $running_processes
 HDD $hr
@@ -179,9 +181,10 @@ ${color #BBBBBB} ${top_mem name 1}${color}${top_mem mem_res 1} ${top_mem mem 1}
 ${color #BBBBBB} ${top_mem name 2}${color}${top_mem mem_res 2} ${top_mem mem 2}
 ${color #BBBBBB} ${top_mem name 3}${color}${top_mem mem_res 3} ${top_mem mem 3}
 ${color #BBBBBB} ${top_mem name 4}${color}${top_mem mem_res 4} ${top_mem mem 4}
-#TEMP $hr
-#${color #BBBBBB} Core 1 Temp:      ${color}${execi 8 sensors | grep Core\ 0: | sed 's/.*:[ ]*\([^ ]*\).*/\1/'}
-#${color #BBBBBB} Core 2 Temp:      ${color}${execi 8 sensors | grep Core\ 1: | sed 's/.*:[ ]*\([^ ]*\).*/\1/'}
+
+TEMP $hr
+${color #BBBBBB} CPU Temp  :  ${color}${execi 8 sensors | grep Tdie: | sed 's/.*:[ ]*\([^ ]*\).*/\1/'}
+${color #BBBBBB} NVME Temp :  ${color}${execi 8 sensors | grep Sensor\ 2: | sed 's/.*:[ ]*\([^ ]*\).*/\1/'}
 
 
 #WEATHER $hr

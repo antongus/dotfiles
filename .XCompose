@@ -66,9 +66,9 @@
 <Multi_key> <equal> <greater>							: "‣"	U2023 # TRIANGULAR BULLET
 <Multi_key> <equal> <asterisk>							: "★"	U2605 # BLACK STAR
 
-<Multi_key> <O> <C>										: "©"	U00A9 # COPYRIGHT SIGN
-<Multi_key> <O> <R>										: "®"	U00AE # REGISTERED SIGN
-<Multi_key> <T> <M>										: "™"	U2122 # TRADE MARK SIGN
+<Multi_key> <o> <c>										: "©"	U00A9 # COPYRIGHT SIGN
+<Multi_key> <o> <r>										: "®"	U00AE # REGISTERED SIGN
+<Multi_key> <t> <m>										: "™"	U2122 # TRADE MARK SIGN
 
 <Multi_key> <o> <x>										: "¤"	U00A4 # CURRENCY SIGN
 <Multi_key> <e> <equal>          						: "€"	U20AC # EURO SIGN
@@ -87,8 +87,6 @@
 
 <Multi_key> <minus> <minus> <period>					: "–"	U2013 # EN DASH: for numbers: 1–2
 <Multi_key> <minus> <minus> <minus> 					: "—"	U2014 # EM DASH: for text: "What?" — he said.
-
-<Multi_key> <tab> <tab>									: "	"	U0009 # HORIZONTAL TABULATION
 
 #====== Smileys & Co
 <Multi_key> <less> <3>									: "♥"	U2665 # BLACK HEART SUIT
