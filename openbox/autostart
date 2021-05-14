@@ -11,6 +11,9 @@ xrandr --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --ou
 # отключить энергосбережение звуковой карты. А то щёлкает, когда просыпается
 echo "0" | sudo tee /sys/module/snd_hda_intel/parameters/power_save
 
+#autocutsel -fork -selection CLIPBOARD &
+#autocutsel -fork -selection PRIMARY &
+
 # panel
 lxpanel &
 #xfce4-panel &
@@ -29,9 +32,9 @@ feh --bg-fill --no-fehbg /home/anton/.wallpapers/fish-1.jpg &
 # отключаем ускорение мыши (0), включаем равномерное движение
 # xinput list, xinput --list-props "2.4G Mouse", 
 # 312 = Accel Profile Enabled
-xinput set-prop "2.4G Mouse" 312 1 0
+#xinput set-prop "2.4G Mouse" 312 1 0
 # 309 = Accel Speed
-xinput set-prop "2.4G Mouse" 309 0.5
+#xinput set-prop "2.4G Mouse" 309 0.5
 
 
 #conky

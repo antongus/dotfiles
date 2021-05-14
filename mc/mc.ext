@@ -391,7 +391,8 @@ type/^PPM
 	Include=image
 
 type/^SVG
-	Include=image
+    Open=(lximage-qt %f >/dev/null 2>&1 &)
+#	Include=image
 
 type/^Netpbm
 	Include=image
@@ -417,6 +418,7 @@ include/image
 #	Open=(viewnior --fullscreen %f >/dev/null 2>&1 &)
 	Open=(feh -d --draw-tinted -F --start-at ./%p . >/dev/null 2>&1 &)
 #	Open=(sviewgl -f %f >/dev/null 2>&1 &)
+#	Open=(lximage-qt %f >/dev/null 2>&1 &)
 
 	#View=%view{ascii} identify %f
 	#View=%view{ascii} asciiview %f

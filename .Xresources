@@ -135,13 +135,23 @@ XTerm*saveLines: 4096
   Shift ~Ctrl ~Meta <Btn2Up>:insert-selection(CLIPBOARD, CUT_BUFFER1)
 
 
+! ******************
+! urxvt config
+! ******************
+
+! Disable Perl extension
+URxvt.perl-ext:
+URxvt.perl-ext-common:
+
+! Disable scrollbar
+URxvt*scrollBar: false
 
 URxvt*geometry: 128x40
-URxvt*font: xft:Liberation Mono:size=12
+URxvt*font: xft:Liberation Mono:size=12:antialias=true
 
 URxvt*background:            S_base03
 URxvt*foreground:            S_base00
-URxvt*fading:                40
+URxvt*fading:                20
 URxvt*fadeColor:             S_base03
 URxvt*cursorColor:           S_base1
 URxvt*pointerColorBackground:S_base01

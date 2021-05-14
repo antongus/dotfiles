@@ -494,3 +494,5 @@ user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false)
 
 /// автообновления
 user_pref("app.update.auto", false);
+user_pref("app.update.enabled", false);
+user_pref("app.update.silent", false);
