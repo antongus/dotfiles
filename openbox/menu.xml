@@ -16,9 +16,14 @@
   <item label="Midnight Commander" icon="/usr/share/icons/hicolor/64x64/apps/MidnightCommander.png">
     <action name="Execute"><execute>x-terminal-emulator -e mc</execute></action>
   </item>
-  <item label="Firefox web browser" icon="/usr/share/icons/elementary-xfce/apps/22/firefox.png">
-<!--    <action name="Execute"><execute>firejail firefox</execute></action> -->
-    <action name="Execute"><execute>firefox</execute></action>
+  <item label="Firefox web browser" icon="/home/anton/Misc/firefox/browser/chrome/icons/default/default128.png">
+    <action name="Execute"><execute>/home/anton/Misc/firefox/firefox</execute></action>
+  </item>
+  <item label="Firefox (Whatsapp)" icon="/home/anton/Misc/firefox/browser/chrome/icons/default/default128.png">
+    <action name="Execute"><execute>/home/anton/Misc/firefox/firefox -P "whatsapp"</execute></action>
+  </item>
+  <item label="Firefox (рос. сертификат)" icon="/home/anton/Misc/firefox/browser/chrome/icons/default/default128.png">
+    <action name="Execute"><execute>/home/anton/Misc/firefox/firefox -P "rus-certs"</execute></action>
   </item>
   <item label="Eclipse" icon="/opt/eclipse/icon.xpm">
     <action name="Execute"><execute>/opt/eclipse/eclipse</execute></action>

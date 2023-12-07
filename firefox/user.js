@@ -496,3 +496,19 @@ user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false)
 user_pref("app.update.auto", false);
 user_pref("app.update.enabled", false);
 user_pref("app.update.silent", false);
+
+/// ещё какой-то зонд, отсылает всё, что я набираю в адресной строке
+user_pref("browser.urlbar.merino.enabled", false);
+user_pref("browser.urlbar.merino.endpointURL", "");
+
+/// отключим рекомендуемые дополнения в настройках дополнений
+user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
+
+user_pref("browser.urlbar.quickactions.enabled", false);
+user_pref("browser.urlbar.shortcuts.quickactions", false);
+
+/// сохранять открываемые файлы во временной директории, как раньше (а не в home)
+user_pref("browser.download.start_downloads_in_tmp_dir", true);
+
+/// отключить предложение аддонов при наборе текста в адресной строке
+user_pref("browser.urlbar.addons.featureGate", false);

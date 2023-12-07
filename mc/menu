@@ -1,14 +1,5 @@
 shell_patterns=0
 
-+ t t
-@       Do something on the tagged files
-	set %t; CMD=%{Enter command}
-	while [ -n "$1" ]; do
-	  $CMD "$1"
-	  shift
-	done
-	
-
 = t d
 1       git-cola here
 	git-cola &
@@ -21,18 +12,16 @@ shell_patterns=0
 
 v       vscode here
 	/home/anton/Misc/VSCode-linux-x64/code . > /dev/null 2>&1 &
+#	/home/anton/Misc/VSCodium/VSCodium.AppImage . > /dev/null 2>&1 &
 
-J       Auto-rotate JPEG-s
+r       Auto-rotate JPEG-s
 	jhead -ft -autorot *.[Jj][Pp][Gg]
 
-T       Correct time for JPEG-s
-	jhead -ft *.[Jj][Pp][Gg]
-
-S       Scale jpegs to 1920x1080 (to separate directory)
+s       Scale jpegs to 1920x1080 (to separate directory)
 	scale-images-1920
 
-p       Post image to internet
-	curl -F'file=@%f' http://0x0.st
+w       Whatsapp
+	/home/anton/Misc/firefox/firefox -P "whatsapp" > /dev/null 2>&1 &
 
 + t r | t d
 c       Compare to opposite (same name)
@@ -48,4 +37,7 @@ r       Compare dirs (same name)
 
 u       Convert file from cp1251 to utf-8
         iconv -f CP1251 -t UTF-8 %f > %f.utf8
+
+a       Mount ATOM2
+        sudo mount /media/atom2
 

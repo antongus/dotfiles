@@ -416,9 +416,10 @@ include/image
 #	Open=(ristretto --fullscreen %f >/dev/null 2>&1 &)
 #	Open=(gwenview --fullscreen %f >/dev/null 2>&1 &)
 #	Open=(viewnior --fullscreen %f >/dev/null 2>&1 &)
-	Open=(feh -d --draw-tinted -F --start-at ./%p . >/dev/null 2>&1 &)
 #	Open=(sviewgl -f %f >/dev/null 2>&1 &)
 #	Open=(lximage-qt %f >/dev/null 2>&1 &)
+#	Open=(sxiv -f %f >/dev/null 2>&1 &)
+	Open=(feh -d --draw-tinted -F --start-at ./%p . >/dev/null 2>&1 &)
 
 	#View=%view{ascii} identify %f
 	#View=%view{ascii} asciiview %f

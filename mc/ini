@@ -110,22 +110,26 @@ editor_drop_selection_on_copy=true
 editor_state_full_filename=true
 editor_stop_format_chars=-+*\\,.;:&>
 
+safe_overwrite=false
+
+shadows=true
+
 [Layout]
-message_visible=0
-keybar_visible=1
-xterm_title=1
+message_visible=false
+keybar_visible=true
+xterm_title=true
 output_lines=0
-command_prompt=1
-menubar_visible=0
+command_prompt=true
+menubar_visible=false
 show_mini_info=1
 permission_mode=0
 filetype_mode=1
-free_space=1
+free_space=true
 
-horizontal_split=0
-vertical_equal=1
+horizontal_split=false
+vertical_equal=true
 left_panel_size=64
-horizontal_equal=1
+horizontal_equal=true
 top_panel_size=19
 
 [Misc]
@@ -188,13 +192,15 @@ file_find_recurs=true
 file_skip_hidden=false
 file_all_charsets=false
 content_use=false
-content_case_sens=true
+content_case_sens=false
 content_regexp=false
 content_first_hit=false
 content_whole_words=false
 content_all_charsets=false
 
 ignore_dirs_enable=true
+
+follow_symlinks=false
 
 [Panelize]
 Изменённые файлы под контролем git=git ls-files --modified
